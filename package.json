@@ -30,9 +30,13 @@
     "env": {
       "node": true
     },
+    "plugins": [
+      "@typescript-eslint",
+      "vue"
+    ],
     "extends": [
       "plugin:vue/vue3-essential",
-      "eslint:recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
       "@vue/typescript"
     ],
     "parserOptions": {
