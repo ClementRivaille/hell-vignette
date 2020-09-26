@@ -1,0 +1,14 @@
+@font-face {
+  font-family: ataristocrat;
+  src: url(../assets/fonts/ATARISTOCRAT.ttf);
+}
+
+@font-face {
+  font-family: typewriter;
+  src: url(../assets/fonts/Albertsthal_Typewriter.ttf);
+}
+
+@font-face {
+  font-family: bpreplay;
+  src: url(../assets/fonts/BPreplayBold.otf);
+}

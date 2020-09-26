@@ -2,5 +2,14 @@
   "start": {
     "title": "Enfer Vignette",
     "begin": "Commencer une nouvelle partie"
+  },
+  "torture": {
+    "instruction": "Recopiez le code ci-dessous",
+    "error": "Faute !!!",
+    "exit": {
+      "0": "Psst, par ici !"
+    },
+    "intro": "Wow, combien de temps cela fait que tu purges ta peine maintenant ? Des années ? Des siècles ? Ça fait plaisir de voir que tu t'y adonnes à cœur en tout cas ! Que dirais-tu d'une petite pause ? Sortons de ta cellule, et je te fais visiter un peu les Enfers. Ne t'en fais pas, je te rammènerai en temps et en heure.",
+    "intro-exit": "Sortons, si tu veux bien."
   }
 }

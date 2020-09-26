@@ -10,6 +10,7 @@
         <screen-torture
           v-else-if="state.screen === GameScreen.Torture"
           :level="0"
+          @exit="onExitTorture"
         />
       </transition>
     </background-landscape>
@@ -23,11 +24,15 @@ import BackgroundLandscape from '@/components/ui/background-landscape.vue';
 import ScreenStart from '@/components/screens/screen-start.vue';
 import ScreenTorture from '@/components/screens/screen-torture.vue';
 
+import '@/styles/fonts.css';
+import '@/styles/screen.css';
+
 export default defineComponent({
   name: 'App',
   setup() {
     const state = reactive({
       screen: GameScreen.Start,
+      level: 0,
     });
     const screenIs = (value: GameScreen) => state.screen === value;
 
@@ -40,8 +45,12 @@ export default defineComponent({
       transition.mode = 'in-out';
       state.screen = GameScreen.Torture;
     };
+    const onExitTorture = () => {
+      transition.mode = 'out-in';
+      state.screen = GameScreen.Hub;
+    };
 
-    return { state, transition, GameScreen, screenIs, onBegin };
+    return { state, transition, GameScreen, screenIs, onBegin, onExitTorture };
   },
   components: { BackgroundLandscape, ScreenStart, ScreenTorture },
 });
@@ -55,24 +64,6 @@ main {
   background: linear-gradient(rgb(75, 113, 240), rgb(8, 12, 238));
 
   color: white;
-  font-size: 26px;
-}
-
-.screen {
-  position: absolute;
-  top: 0;
-  min-height: 100vh;
-  width: 100vw;
-  padding: 3rem 5rem;
-  box-sizing: border-box;
-}
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 1s;
-}
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
+  font-family: sans;
 }
 </style>

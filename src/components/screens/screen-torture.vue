@@ -1,26 +1,44 @@
 <template>
-  <div class="screen torture">
-    <div class="prompt">
-      <div class="instructions">{{ $t('torture.instruction') }}</div>
-      {{ state.prompt }}
-    </div>
+  <div class="screen">
+    <transition name="screen-fade" mode="out-in">
+      <div class="torture" v-if="!state.displayIntro">
+        <div class="prompt">
+          <div class="instructions">{{ $t('torture.instruction') }}</div>
+          <div class="code">{{ state.prompt }}</div>
+        </div>
 
-    <div class="typed">
-      {{ state.typed }}
-    </div>
+        <div class="typed">
+          {{ state.typed }}
+        </div>
 
-    <div class="exit">
-      <div v-if="state.score >= 2">TODO</div>
-    </div>
+        <div class="help">
+          <div class="exit" v-if="state.score >= 0">
+            <button-link @click="exit">{{
+              $t(`torture.exit.${level}`)
+            }}</button-link>
+          </div>
+        </div>
 
-    <div class="error" v-if="state.displayError">
-      <span class="alert">{{ $t('torture.error') }} </span>
-    </div>
+        <div class="error" v-if="state.displayError">
+          <span class="alert">{{ $t('torture.error') }} </span>
+        </div>
+      </div>
+      <div class="intro" v-else-if="state.displayIntro">
+        <ui-paragraph
+          ><p>{{ $t('torture.intro') }}</p></ui-paragraph
+        >
+        <button-link @click="exit(true)">{{
+          $t('torture.intro-exit')
+        }}</button-link>
+      </div>
+    </transition>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, onMounted, onUnmounted, reactive } from 'vue';
+import ButtonLink from '@/components/ui/button-link.vue';
+import UiParagraph from '@/components/ui/ui-paragraph.vue';
 
 const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
 export default defineComponent({
@@ -28,21 +46,26 @@ export default defineComponent({
   props: {
     level: {
       type: Number,
+      required: true,
     },
   },
   emit: ['exit'],
+  components: { ButtonLink, UiParagraph },
   setup(props, context) {
     const state = reactive({
+      locked: false,
       displayError: false,
       prompt: '',
       typed: '',
       cursor: 0,
       score: 0,
+      displayIntro: false,
     });
 
     const generatePrompt = () => {
       let prompt = '';
-      for (let i = 0; i < 10; i++) {
+      const length = 8 + Math.floor(Math.random() * 4);
+      for (let i = 0; i < length; i++) {
         let char = characters.charAt(
           Math.floor(Math.random() * characters.length)
         );
@@ -63,29 +86,36 @@ export default defineComponent({
 
     const onSuccess = () => {
       state.score++;
-      reset();
+      state.locked = true;
+
+      setTimeout(() => {
+        state.locked = false;
+        reset();
+      }, 300);
     };
 
     const onError = () => {
-      state.score += -1;
+      state.score = Math.max(state.score - 1, -3);
 
+      state.locked = true;
       state.displayError = true;
       setTimeout(() => {
         state.displayError = false;
+        state.locked = false;
         reset();
       }, 400);
     };
 
     const onKeyDown = (e: KeyboardEvent) => {
-      if (state.displayError) return;
+      if (state.locked) return;
 
       const pressed = e.key;
       if (!characters.includes(pressed.toLowerCase())) return;
+      state.typed += pressed;
 
       const char = state.prompt.charAt(state.cursor) || '';
       if (char === pressed) {
         state.cursor++;
-        state.typed += char;
         if (state.cursor === state.prompt.length) {
           onSuccess();
         }
@@ -97,33 +127,99 @@ export default defineComponent({
     onMounted(() => window.addEventListener('keydown', onKeyDown));
     onUnmounted(() => window.removeEventListener('keydown', onKeyDown));
 
-    return { state };
+    function exit(force = false) {
+      if (props.level === 0 && !force) {
+        state.displayIntro = true;
+      } else {
+        context.emit('exit');
+      }
+    }
+
+    return { state, exit };
   },
 });
 </script>
 
 <style scoped>
-.torture {
+.screen {
   background-color: #000000;
+  display: flex;
+  flex-direction: column;
+}
+
+.torture {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
 
+.prompt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: ataristocrat;
+}
+
+.instructions {
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.code {
+  font-size: 3rem;
+  background-color: #777981;
+  color: #d1d1d1;
+  padding: 0.4em 0.3em;
+  width: 70vw;
+  text-align: center;
+}
+
+.typed {
+  height: 6rem;
+  width: 80vw;
+  border-radius: 50px;
+  background-color: rgb(223, 214, 132);
+  color: black;
+  font-family: typewriter;
+  font-size: 3rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
 .error {
   position: fixed;
   height: 50vh;
-  width: 100wh;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .error .alert {
-  background: yellow;
-  color: red;
-  padding: 5rem 6rem;
-  font-size: 3rem;
-  font-variant: small-caps;
+  font-family: ataristocrat;
+  background: rgb(224, 222, 51);
+  display: block;
+  color: rgb(168, 43, 43);
+  border: solid rgb(168, 43, 43) 20px;
+  padding: 1rem 9rem;
+  font-size: 6rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.help {
+  font-style: italic;
+  height: 3rem;
+}
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.intro > * + * {
+  margin-top: 4rem;
 }
 </style>

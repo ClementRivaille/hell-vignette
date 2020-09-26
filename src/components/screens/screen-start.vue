@@ -1,8 +1,10 @@
 <template>
   <div class="start screen">
-    <h1>{{ $t('start.title') }}</h1>
-    <div class="menu">
-      <a @click.prevent="begin">{{ $t('start.begin') }}</a>
+    <div>
+      <h1>{{ $t('start.title') }}</h1>
+      <div class="menu">
+        <a href="#" @click.prevent="begin">{{ $t('start.begin') }}</a>
+      </div>
     </div>
   </div>
 </template>
@@ -25,22 +27,43 @@ export default defineComponent({
 <style scoped>
 .start {
   background-color: #2e2e2e;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 4.3rem;
   text-align: center;
-  margin-bottom: 4em;
+  font-family: bpreplay;
+  letter-spacing: 10px;
+  margin: 0 0 3rem 0;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+}
+.menu > * + * {
+  margin-left: 2rem;
 }
 
 a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
   cursor: pointer;
   border: solid lightgrey 2px;
-  padding: 0.3em 0.6em;
+  padding: 0.5em 0.8em;
   border-radius: 15px;
 }
-a:hover {
+a:hover,
+a:focus {
+  outline: none;
   color: #d1df92;
   border-color: #d1df92;
+  box-shadow: #d1df92 0 0 0 2px;
 }
 </style>
