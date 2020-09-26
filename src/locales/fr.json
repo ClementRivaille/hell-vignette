@@ -14,9 +14,10 @@
   },
   "hub": {
     "next": "Quelle cellule veux-tu visiter ensuite ?",
-    "text-0": "Plus trop habitué à la lumière du jour, on dirait ? D'ici, on a accès aux cellules dans lesquelles on torture nos sujets. Il y en a plus que tu ne pourrais en visiter en toute une vie ! Je propose qu'on ne s'attarde qu'à celles qui sont à proximité. Vas-y, choisis celle qui t'intéresse en premier."
+    "text-0": "Plus trop habitué à la lumière du jour, on dirait ? D'ici, on a accès aux cellules de tortures. Il y en a plus que tu ne pourrais en visiter en toute une vie ! Chaque torture est personnalisée selon les sujets. Je propose qu'on ne s'attarde qu'à celles qui sont à proximité. Vas-y, choisis la cellule qui t'intéresse en premier."
   },
   "cells": {
+    "exit": "Sortie",
     "fan": {
       "title": "F-3028"
     },

@@ -31,7 +31,7 @@ export default defineComponent({
       required: true,
     },
     cells: {
-      type: Array,
+      type: Array as () => string[],
       required: true,
     },
     first: {
@@ -70,11 +70,11 @@ export default defineComponent({
 }
 
 .cells {
-  height: 15rem;
+  height: 18rem;
   width: 100%;
   display: grid;
   grid-template: repeat(4, 1fr) / repeat(5, 1fr);
-  gap: 1rem;
+  gap: 1.5rem;
   justify-items: stretch;
   align-items: stretch;
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="paragraph">
+  <div class="paragraph" :class="[color]">
     <slot />
   </div>
 </template>
@@ -16,7 +16,7 @@ export default defineComponent({
   name: 'ui-paragraph',
   props: {
     color: {
-      type: String,
+      type: String as () => TextColor,
     },
   },
 });
@@ -29,6 +29,10 @@ export default defineComponent({
   text-shadow: black 0.2em 0.2em 1em;
   line-height: 1.7em;
   box-sizing: border-box;
+}
+
+.paragraph.black {
+  color: black;
 }
 
 .paragraph >>> * {

@@ -18,6 +18,13 @@
           :level="state.level"
           :cells="state.cells"
           :first="state.cells.length === 4"
+          @open="onOpenCell($event)"
+        />
+
+        <screen-cell
+          v-else-if="state.screen === GameScreen.Cell && state.selectedCell"
+          :cell="state.selectedCell"
+          @exit="onExitCell"
         />
       </transition>
     </background-landscape>
@@ -31,15 +38,17 @@ import BackgroundLandscape from '@/components/ui/background-landscape.vue';
 import ScreenStart from '@/components/screens/screen-start.vue';
 import ScreenTorture from '@/components/screens/screen-torture.vue';
 import ScreenHub from '@/components/screens/screen-hub.vue';
+import ScreenCell from '@/components/screens/screen-cell.vue';
 
 import '@/styles/fonts.css';
 import '@/styles/screen.css';
-import { cellsConfigs } from './utils/cells';
+import { CellConfig, cellsConfigs } from './utils/cells';
 
 interface GameState {
   screen: GameScreen;
   level: number;
   cells: string[];
+  selectedCell?: CellConfig;
   questions: string[];
 }
 
@@ -50,6 +59,7 @@ export default defineComponent({
       screen: GameScreen.Start,
       level: 0,
       cells: [],
+      selectedCell: undefined,
       questions: ['why'],
     });
     const screenIs = (value: GameScreen) => state.screen === value;
@@ -74,10 +84,39 @@ export default defineComponent({
       ];
       state.screen = GameScreen.Hub;
     };
+    const onOpenCell = (cell: string) => {
+      const cellConfig = cellsConfigs.find((config) => config.id === cell);
+      if (!cellConfig) return;
 
-    return { state, transition, GameScreen, screenIs, onBegin, onExitTorture };
+      state.selectedCell = cellConfig;
+      state.screen = GameScreen.Cell;
+    };
+    const onExitCell = () => {
+      state.cells = state.cells.filter(
+        (id) => !state.selectedCell || id !== state.selectedCell.id
+      );
+      state.screen =
+        state.cells.length > 0 ? GameScreen.Hub : GameScreen.Question;
+    };
+
+    return {
+      state,
+      transition,
+      GameScreen,
+      screenIs,
+      onBegin,
+      onExitTorture,
+      onOpenCell,
+      onExitCell,
+    };
   },
-  components: { BackgroundLandscape, ScreenStart, ScreenTorture, ScreenHub },
+  components: {
+    BackgroundLandscape,
+    ScreenStart,
+    ScreenTorture,
+    ScreenHub,
+    ScreenCell,
+  },
 });
 </script>
 
