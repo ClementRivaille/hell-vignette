@@ -112,6 +112,7 @@ export default defineComponent({
       } else if (state.level === NB_LEVELS) {
         state.screen = GameScreen.BeforeEnd;
       } else {
+        transition.mode = 'in-out';
         state.screen = GameScreen.Credits;
       }
     };

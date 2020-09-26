@@ -1,6 +1,6 @@
 <template>
   <transition name="screen-fade" mode="out-in">
-    <div class="dialog" v-if="dialog">
+    <div class="dialog" v-if="dialog" :key="dialogIdx">
       <ui-paragraph class="lines">
         <p v-for="line in dialog.lines" :key="line">{{ $t(line) }}</p>
       </ui-paragraph>
@@ -52,7 +52,7 @@ export default defineComponent({
       }
     };
 
-    return { dialog, next };
+    return { dialog, dialogIdx, next };
   },
 });
 </script>
