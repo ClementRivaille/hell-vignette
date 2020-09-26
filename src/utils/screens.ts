@@ -5,6 +5,7 @@ export enum GameScreen {
   Hub,
   Cell,
   Question,
+  BeforeEnd,
   End,
   Credits,
 }

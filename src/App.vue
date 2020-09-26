@@ -33,6 +33,19 @@
           :questions="state.questions"
           @leave="onLeaveQuestion(question)"
         />
+
+        <screen-before-end
+          v-else-if="state.screen === GameScreen.BeforeEnd"
+          @continue="onEnterEnd"
+        />
+
+        <screen-end
+          v-else-if="state.screen === GameScreen.End"
+          @return="onRefuseEnd"
+          @end="onEnd"
+        />
+
+        <div v-else-if="state.screen === GameScreen.Credits">pouet</div>
       </transition>
     </background-landscape>
   </main>
@@ -47,6 +60,8 @@ import ScreenTorture from '@/components/screens/screen-torture.vue';
 import ScreenHub from '@/components/screens/screen-hub.vue';
 import ScreenCell from '@/components/screens/screen-cell.vue';
 import ScreenQuestions from '@/components/screens/screen-questions.vue';
+import ScreenBeforeEnd from '@/components/screens/screen-before-end.vue';
+import ScreenEnd from '@/components/screens/screen-end.vue';
 
 import '@/styles/fonts.css';
 import '@/styles/screen.css';
@@ -59,6 +74,9 @@ interface GameState {
   selectedCell?: CellConfig;
   questions: string[];
 }
+
+// const NB_LEVELS = 5;
+const NB_LEVELS = 0;
 
 export default defineComponent({
   name: 'App',
@@ -83,13 +101,19 @@ export default defineComponent({
     const onExitTorture = () => {
       transition.mode = 'out-in';
 
-      state.cells = [
-        cellsConfigs[0].id,
-        // cellsConfigs[2].id,
-        // cellsConfigs[3].id,
-        // cellsConfigs[1].id,
-      ];
-      state.screen = GameScreen.Hub;
+      if (state.level < NB_LEVELS) {
+        state.cells = [
+          cellsConfigs[0].id,
+          // cellsConfigs[2].id,
+          // cellsConfigs[3].id,
+          // cellsConfigs[1].id,
+        ];
+        state.screen = GameScreen.Hub;
+      } else if (state.level === NB_LEVELS) {
+        state.screen = GameScreen.BeforeEnd;
+      } else {
+        state.screen = GameScreen.Credits;
+      }
     };
     const onOpenCell = (cell: string) => {
       const cellConfig = cellsConfigs.find((config) => config.id === cell);
@@ -110,6 +134,20 @@ export default defineComponent({
       state.level++;
       state.screen = GameScreen.Torture;
     };
+    const onEnterEnd = () => {
+      transition.mode = 'out-in';
+      state.screen = GameScreen.End;
+    };
+    const onRefuseEnd = () => {
+      state.level++;
+      transition.mode = 'in-out';
+      state.screen = GameScreen.Torture;
+    };
+    const onEnd = () => {
+      console.log('Waaaaa!?');
+      transition.mode = 'in-out';
+      state.screen = GameScreen.Credits;
+    };
 
     return {
       state,
@@ -120,6 +158,9 @@ export default defineComponent({
       onOpenCell,
       onExitCell,
       onLeaveQuestion,
+      onEnterEnd,
+      onRefuseEnd,
+      onEnd,
     };
   },
   components: {
@@ -129,6 +170,8 @@ export default defineComponent({
     ScreenHub,
     ScreenCell,
     ScreenQuestions,
+    ScreenBeforeEnd,
+    ScreenEnd,
   },
 });
 </script>
