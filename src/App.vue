@@ -26,6 +26,13 @@
           :cell="state.selectedCell"
           @exit="onExitCell"
         />
+
+        <screen-questions
+          v-else-if="state.screen === GameScreen.Question"
+          :level="state.level"
+          :questions="state.questions"
+          @leave="onLeaveQuestion(question)"
+        />
       </transition>
     </background-landscape>
   </main>
@@ -39,6 +46,7 @@ import ScreenStart from '@/components/screens/screen-start.vue';
 import ScreenTorture from '@/components/screens/screen-torture.vue';
 import ScreenHub from '@/components/screens/screen-hub.vue';
 import ScreenCell from '@/components/screens/screen-cell.vue';
+import ScreenQuestions from '@/components/screens/screen-questions.vue';
 
 import '@/styles/fonts.css';
 import '@/styles/screen.css';
@@ -60,9 +68,8 @@ export default defineComponent({
       level: 0,
       cells: [],
       selectedCell: undefined,
-      questions: ['why'],
+      questions: ['deserve', 'eternity', 'tortures', 'pretty', 'who'],
     });
-    const screenIs = (value: GameScreen) => state.screen === value;
 
     const transition = reactive({
       name: 'fade',
@@ -78,9 +85,9 @@ export default defineComponent({
 
       state.cells = [
         cellsConfigs[0].id,
-        cellsConfigs[2].id,
-        cellsConfigs[3].id,
-        cellsConfigs[1].id,
+        // cellsConfigs[2].id,
+        // cellsConfigs[3].id,
+        // cellsConfigs[1].id,
       ];
       state.screen = GameScreen.Hub;
     };
@@ -98,16 +105,21 @@ export default defineComponent({
       state.screen =
         state.cells.length > 0 ? GameScreen.Hub : GameScreen.Question;
     };
+    const onLeaveQuestion = (question: string) => {
+      state.questions = state.questions.filter((q) => q !== question);
+      state.level++;
+      state.screen = GameScreen.Torture;
+    };
 
     return {
       state,
       transition,
       GameScreen,
-      screenIs,
       onBegin,
       onExitTorture,
       onOpenCell,
       onExitCell,
+      onLeaveQuestion,
     };
   },
   components: {
@@ -116,6 +128,7 @@ export default defineComponent({
     ScreenTorture,
     ScreenHub,
     ScreenCell,
+    ScreenQuestions,
   },
 });
 </script>

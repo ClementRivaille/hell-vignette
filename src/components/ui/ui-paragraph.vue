@@ -40,6 +40,6 @@ export default defineComponent({
 }
 
 .paragraph >>> * + * {
-  margin-top: 2em;
+  margin-top: 0.8em;
 }
 </style>

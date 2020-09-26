@@ -78,5 +78,42 @@
     "ruins": {
       "title": "J-0905"
     }
+  },
+  "question": {
+    "intro": {
+      "0": "",
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": ""
+    },
+    "exit": {
+      "0": "",
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": ""
+    },
+    "back": "Au travail !",
+    "deserve": {
+      "title": "Qu'ai-je fait pour mériter d'aller en Enfer ?",
+      "answer": "oepij soijsepoi fj opi js foijes poisej sfoij oisj eoifj soiejf psoei jspoief spoeif jsepoif jpoiejpoifa jepoijfoi jfepoai jpofija poeifj apoeifj poaiefjpionislundfouaeoiuezoiuah eoiufhaiuho iu"
+    },
+    "eternity": {
+      "title": "Vais-je rester ici pour l'éternité ?",
+      "answer": ""
+    },
+    "tortures": {
+      "title": "Comment sont choisies les tortures ?",
+      "answer": ""
+    },
+    "pretty": {
+      "title": "Comment se fait-il que l'Enfer soit un endroit aussi joli ?",
+      "answer": ""
+    },
+    "who": {
+      "title": "Qui êtes vous ?",
+      "answer": ""
+    }
   }
 }
