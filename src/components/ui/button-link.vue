@@ -30,6 +30,7 @@ export default defineComponent({
 .button-link:focus,
 .button-link:hover {
   outline: none;
+  background: #47724b;
   box-shadow: rgba(255, 255, 255, 0.6) 0 0 0.8em;
 }
 </style>

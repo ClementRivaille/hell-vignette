@@ -9,8 +9,15 @@
 
         <screen-torture
           v-else-if="state.screen === GameScreen.Torture"
-          :level="0"
+          :level="state.level"
           @exit="onExitTorture"
+        />
+
+        <screen-hub
+          v-else-if="state.screen === GameScreen.Hub"
+          :level="state.level"
+          :cells="state.cells"
+          :first="state.cells.length === 4"
         />
       </transition>
     </background-landscape>
@@ -23,16 +30,27 @@ import { GameScreen } from '@/utils/screens';
 import BackgroundLandscape from '@/components/ui/background-landscape.vue';
 import ScreenStart from '@/components/screens/screen-start.vue';
 import ScreenTorture from '@/components/screens/screen-torture.vue';
+import ScreenHub from '@/components/screens/screen-hub.vue';
 
 import '@/styles/fonts.css';
 import '@/styles/screen.css';
+import { cellsConfigs } from './utils/cells';
+
+interface GameState {
+  screen: GameScreen;
+  level: number;
+  cells: string[];
+  questions: string[];
+}
 
 export default defineComponent({
   name: 'App',
   setup() {
-    const state = reactive({
+    const state: GameState = reactive({
       screen: GameScreen.Start,
       level: 0,
+      cells: [],
+      questions: ['why'],
     });
     const screenIs = (value: GameScreen) => state.screen === value;
 
@@ -47,12 +65,19 @@ export default defineComponent({
     };
     const onExitTorture = () => {
       transition.mode = 'out-in';
+
+      state.cells = [
+        cellsConfigs[0].id,
+        cellsConfigs[2].id,
+        cellsConfigs[3].id,
+        cellsConfigs[1].id,
+      ];
       state.screen = GameScreen.Hub;
     };
 
     return { state, transition, GameScreen, screenIs, onBegin, onExitTorture };
   },
-  components: { BackgroundLandscape, ScreenStart, ScreenTorture },
+  components: { BackgroundLandscape, ScreenStart, ScreenTorture, ScreenHub },
 });
 </script>
 

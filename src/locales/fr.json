@@ -1,6 +1,6 @@
 {
   "start": {
-    "title": "Enfer Vignette",
+    "title": "Vignette des Enfers",
     "begin": "Commencer une nouvelle partie"
   },
   "torture": {
@@ -11,5 +11,71 @@
     },
     "intro": "Wow, combien de temps cela fait que tu purges ta peine maintenant ? Des années ? Des siècles ? Ça fait plaisir de voir que tu t'y adonnes à cœur en tout cas ! Que dirais-tu d'une petite pause ? Sortons de ta cellule, et je te fais visiter un peu les Enfers. Ne t'en fais pas, je te rammènerai en temps et en heure.",
     "intro-exit": "Sortons, si tu veux bien."
+  },
+  "hub": {
+    "next": "Quelle cellule veux-tu visiter ensuite ?",
+    "text-0": "Plus trop habitué à la lumière du jour, on dirait ? D'ici, on a accès aux cellules dans lesquelles on torture nos sujets. Il y en a plus que tu ne pourrais en visiter en toute une vie ! Je propose qu'on ne s'attarde qu'à celles qui sont à proximité. Vas-y, choisis celle qui t'intéresse en premier."
+  },
+  "cells": {
+    "fan": {
+      "title": "F-3028"
+    },
+    "carCritic": {
+      "title": "G-8748"
+    },
+    "blues": {
+      "title": "Z-1984"
+    },
+    "tortureInstruments": {
+      "title": "E-9098"
+    },
+    "jogging": {
+      "title": "B-1576"
+    },
+    "puppies": {
+      "title": "W-6842"
+    },
+    "oxygen": {
+      "title": "V-3218"
+    },
+    "insomnia": {
+      "title": "L-0648"
+    },
+    "tv": {
+      "title": "C-4583"
+    },
+    "machine": {
+      "title": "U-9201"
+    },
+    "skeleton": {
+      "title": "M-5454"
+    },
+    "void": {
+      "title": "S-8235"
+    },
+    "gala": {
+      "title": "E-6480"
+    },
+    "memories": {
+      "title": "L-3478"
+    },
+    "jumpscare": {
+      "title": "J-8321"
+    },
+    "museum": {
+      "title": "M-5594"
+    },
+    "island": {
+      "title": "O-6766"
+    },
+    "glass": {
+      "title": "D-9404"
+    },
+    "watchers": {
+      "title": "Y-6916"
+    },
+    "ruins": {
+      "title": "J-0905"
+    }
   }
 }

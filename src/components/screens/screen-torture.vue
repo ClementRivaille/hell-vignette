@@ -211,8 +211,8 @@ export default defineComponent({
 }
 
 .help {
-  font-style: italic;
-  height: 3rem;
+  height: 2rem;
+  font-size: 0.8rem;
 }
 .intro {
   display: flex;
