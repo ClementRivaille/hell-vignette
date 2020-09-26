@@ -15,7 +15,7 @@ export const cellsConfigs: CellConfig[] = [
     level: 0,
     title: 'F-3028',
     position: 15,
-    nbParagraphs: 1,
+    nbParagraphs: 2,
     color: '#546545',
     blackText: false,
     img: 'fan.png',

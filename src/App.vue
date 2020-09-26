@@ -31,7 +31,7 @@
           v-else-if="state.screen === GameScreen.Question"
           :level="state.level"
           :questions="state.questions"
-          @leave="onLeaveQuestion(question)"
+          @leave="onLeaveQuestion($event)"
         />
 
         <screen-before-end
@@ -75,8 +75,7 @@ interface GameState {
   questions: string[];
 }
 
-// const NB_LEVELS = 5;
-const NB_LEVELS = 0;
+const NB_LEVELS = 5;
 
 export default defineComponent({
   name: 'App',

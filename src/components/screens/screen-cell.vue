@@ -3,7 +3,7 @@
     <div class="description">
       <ui-paragraph :color="cell.black ? TextColor.Black : TextColor.White">
         <p v-for="i in cell.nbParagraphs" :key="`${cell.id}.${i}`">
-          {{ $t(`cells.${cell.id}.description.${i}`) }}
+          {{ $t(`cells.${cell.id}.description.${i - 1}`) }}
         </p>
       </ui-paragraph>
     </div>
