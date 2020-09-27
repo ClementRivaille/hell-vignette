@@ -32,7 +32,10 @@ export default defineComponent({
   emits: ["exit"],
   components: { UiParagraph, DoorButton, UiScreen },
   setup: (props) => {
-    return { TextColor, imageSrc: require(`@/assets/images/test.png`) };
+    return {
+      TextColor,
+      imageSrc: require(`@/assets/images/${props.cell.img}`),
+    };
   },
 });
 </script>

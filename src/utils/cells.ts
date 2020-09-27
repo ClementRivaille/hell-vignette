@@ -28,7 +28,7 @@ export const cellsConfigs: CellConfig[] = [
     nbParagraphs: 2,
     color: '#546545',
     blackText: false,
-    img: 'carCritic.png',
+    img: 'car.png',
   },
   {
     id: 'blues',
