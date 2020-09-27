@@ -22,7 +22,7 @@
   "hub": {
     "next": "Quelle cellule veux-tu visiter ensuite ?",
     "text-0": "Plus trop habitué à la lumière du jour, on dirait ? D'ici, on a accès aux cellules de tortures. Il y en a plus que tu ne pourrais en visiter en toute une vie ! Chaque torture est personnalisée selon les sujets. Je propose qu'on ne s'attarde qu'à celles qui sont à proximité. Vas-y, choisis la cellule qui t'intéresse en premier.",
-    "text-1": "Tu as l'air encore en forme ! La torture ne t'as pas encore rendu trop gaga ? Prenons un peu l'air. Choisis une cellule, et je te la présente.",
+    "text-1": "Tu as l'air encore en forme ! La souffrance ne t'as pas encore rendu trop gaga ? Prenons un peu l'air. Choisis une cellule, et je te la présente.",
     "text-2": "Je vois que tu tiens le coup, c'est bien. Malheureusement j'ai peur que le pire est à venir encore pour toi. Le but de ton supplice t'échappes peut-être, mais il te changera crois moi. En attendant, faisons un peu de tourisme ! Où veux-tu aller ?",
     "text-3": "À quand remonte ma dernière visite ? Deux semaines ? Plusieurs mois ? Des années !? On perd vite la notion du temps ici… Mais ce n'est pas plus mal ! Vas-y, dis moi ce que tu souhaites voir.",
     "text-4": "Tu n'es plus le même condamné que j'avais rencontré la première fois ! La torture t'as… Je ne dirais pas « mûri » nécessairement, ni forcément « détruit ». Elle a eu un impact, positif ou non. C'est l'essentiel. Mais j'espère que tu es toujours d'attaque pour nos petites sorties !"
@@ -33,7 +33,7 @@
       "title": "F-3028",
       "description": [
         "Cette cellule est un peu particulière. Tu vois la personne sur la scène ? C'est son paradis. Elle réalise son rêve de présenter et commenter absolument toutes les œuvres qu'elle a aimé dans sa vie. Romans, films, musiques, comic-strips, livres pour enfants, fanarts… Tout ! Elle peut parler de chacun pendant des heures avec passion, face à un auditoir toujours attentif !",
-        "Pour ceux-là, par contre… C'est une torture."
+        "Pour ceux-là, par contre… C'est un supplice."
       ]
     },
     "carCritic": {
@@ -69,7 +69,7 @@
       "title": "W-6842",
       "description": [
         "Regardes-moi ces bébés, ne sont-ils pas mignons ? Il y a de tout : humains, chiots, chatons, lapins… Impossible d'y être insensible ! Mais ne te fies pas à leurs airs innocents, se sont tous des démons déguisés. On demande aux sujets de s'occuper des nourrissons, et ces derniers vont faire tout leur possible pour rendre la tâche atroce et douloureuse ! Crois-moi, en méchanceté, ils y connaissent un rayon.",
-        "Pour rendre le stress encore plus insoutenable, les sujets sont sous surveillance. Au moindre signe de fatigue, colère, ou même désespoir, on les sermonne ! D'une façon étrange, aucun d'entre eux n'a envie d'être vu comme un monstre irésponsable. Ou en tout cas, plus qu'ils ne le sont déjà."
+        "Pour rendre le stress encore plus insoutenable, les sujets sont sous surveillance. Au moindre signe de fatigue, colère, ou même désespoir, on les sermonne ! D'une façon étrange, aucun d'entre eux n'a envie d'être vu comme un monstre irresponsable. Ou en tout cas, plus qu'ils ne le sont déjà."
       ]
     },
     "oxygen": {
@@ -82,7 +82,7 @@
     "insomnia": {
       "title": "L-0648",
       "description": [
-        "Cette torture est terrible. Le sujet est prisonnier d'une nuit d'insomnie qui n'en finit pas. À chaque fois qu'il ou elle essaye de dormir, nous émettons un bruit de moustique près de son oreille. Le sujet va alors allumer la lumière, fouiller minutieusement tous les coins, sans rien trouver. Répéter ce manège des centaines de fois les conduit n'importe qui à la folie !",
+        "Cette torture est terrible. Le sujet est prisonnier d'une nuit d'insomnie qui n'en finit pas. À chaque fois qu'il ou elle essaye de dormir, nous émettons un bruit de moustique près de son oreille. Le sujet va alors allumer la lumière, fouiller minutieusement tous les coins, sans rien trouver. Répéter ce manège des centaines de fois conduit n'importe qui à la folie !",
         "À force, les torturés finissent par connaître par cœur leur petite chambre. Ils ont inspecté tous les murs, ont retourné tous les meubles… Ils s'accrochent à l'espoir qu'en s'endormant, ils pourront s'échapper. Si seulement ils réalisaient qu'ils sont déjà partis !"
       ]
     },
@@ -96,7 +96,7 @@
     "machine": {
       "title": "U-9201",
       "description": [
-        "Voici la Machine ! Imposant, n'est-ce pas ? Ce qu'elle fait ? Aucune idée ! Elle a besoin de milliers d'ouvriers pour la faire fonctionner, mais personne ne sait ce qu'elle produit. Certainement pas les managers ! Ce sont eux les vrais sujets. Ils n'ont aucune idée de ce qu'ils fabriquent, mais on leur a donné des deadline serrées et une exigence de résultats. Alors ils courent dans tous les sens, dans un crunch permanent, beuglent des ordres, se disputent entre eux, tentent de comprendre ce qu'il se passe tout essayant de donner l'impression que ce sont des experts… Tu sais le plus drôle ? Je parie qu'ils sont quasiment tous anti-syndicats !"
+        "Voici la Machine ! Imposant, n'est-ce pas ? Ce qu'elle fait ? Aucune idée ! Elle a besoin de milliers d'ouvriers pour la faire fonctionner, mais personne ne sait ce qu'elle produit. Certainement pas les managers ! Ce sont eux les vrais sujets. Ils n'ont aucune idée de ce qu'ils fabriquent, mais on leur a donné des deadline serrées et une exigence de résultats. Alors ils courent dans tous les sens, dans un crunch permanent, beuglent des ordres, se disputent entre eux, tentent de comprendre ce qu'il se passe, tout essayant de donner l'impression que ce sont des experts… Tu sais le plus drôle ? Je parie qu'ils sont quasiment tous anti-syndicats !"
       ]
     },
     "skeleton": {
@@ -112,22 +112,22 @@
       "description": [
         "Avant d'entrer, enfile ces écouteurs. Concentre toi bien sur la musique, et essaye de visualiser mentalement quelque chose, disons, de positif.",
         "Il n'y a rien dans cette cellule. Une étendue infinie de Vide. Celui qui précède l'univers, et qui viendra après lui. En l'observant, on est forcément subjugé. Par l'absence de tout. Il n'y a ici ni son, ni silence. Ni lumière, ni obscurité.",
-        "Mais sur le long terme, ce n'est pas ça qui effraie le plus. Quand on les enferme ici, les sujets sont au départ impressionés, mais se disent qu'ils finiront par s'y faire. Au pire l'ennui leur fera perdre la raison ! Mais au bout d'un moment, ils percoivent quelque chose… Quelque chose d'affreux. Dans ce vide, il y a eux. Ils prennent pleine conscience de leur existence ! Soudain ils se percoivent de l'anomalie qu'ils représentent ! Leurs pensées hurlent en écho dans leur tête, sans qu'ils ne puissent les vider nulle part ! Ils crient sans émettre de son, tentent de s'aggripper à quelque chose autour d'eux, mais il n'y a rien d'autre qu'eux-même. C'est comme s'ils sombraient dans un trou noir situé dans leur propre cœur. Ils désirent plus que tout s'effacer eux-même, trouver un bouton off, pour ne plus affronter les abysses tourmentées de leur propre conscience…",
-        "Ne regarde pas le vide trop longtemps ! Ferme les yeux, et tentes d'oublier."
+        "Mais sur le long terme, ce n'est pas ça qui effraie le plus. Quand on les enferme ici, les sujets sont au départ impressionés, mais se disent qu'ils finiront par s'y faire. Au pire l'ennui leur fera perdre la raison ! Mais au bout d'un moment, ils percoivent quelque chose… Quelque chose d'affreux. Dans ce vide, il y a eux. Ils prennent pleine conscience de leur existence ! Soudain ils remarquent l'anomalie qu'ils représentent ! Leurs pensées hurlent en écho dans leur tête, sans qu'ils ne puissent la vider nulle part ! Ils crient sans émettre de son, tentent de s'aggripper à quelque chose autour d'eux, mais il n'y a rien d'autre qu'eux-même. C'est comme s'ils sombraient dans un trou noir situé dans leur propre cœur. Ils désirent plus que tout s'effacer de l'existence, trouver un bouton off, et ne plus affronter les abysses tourmentées de leur propre conscience…",
+        "Ne regarde pas le vide trop longtemps ! Ferme les yeux, et tente d'oublier."
       ]
     },
     "gala": {
       "title": "E-6480",
       "description": [
-        "Prends un verre, je t'en prie ! Le champagne est délicieux. Et puis c'est très mal vu ici ne ne rien boire. Dans cette soirée gala, on trouve les invités les plus chics qui soient. Barons, duchesses, ministres, royautés, patrons de multinationales, stars… Des gens très tatillons sur les bonnes manières ! Ils ne sont d'ailleurs pas ici pour s'amuser. Une fête comme celle-ci est pour eux une compétition. C'est un lieu où l'on doit sans cesse prouver son statut social, écraser dignement tous les invités de rang inférieur, si l'on veut espérer monter au sommet. Il n'y a pas de place au divertissement, l'enjeu est de conserver les apparences de jovialité et de respect tout en restant vigilant et intransigeant. Le tout en consommant les mets et vins les plus raffinés qui soient !",
-        "Où est la torture dans tout ça ? Le twist, figures-toi, est qu'il n'y a aucune toilettes ici."
+        "Prends un verre, je t'en prie ! Le champagne est délicieux. Et puis c'est très mal vu ici ne ne rien boire. Dans cette soirée gala, on trouve les invités les plus chics qui soient. Barons, duchesses, ministres, royautés, patrons de multinationales, stars… Des gens très tatillons sur les bonnes manières ! Ils ne sont d'ailleurs pas ici pour s'amuser. Une fête comme celle-ci est pour eux une compétition. C'est un lieu où l'on doit sans cesse prouver son statut social, écraser (avec dignité) tous les invités de rang inférieur, si l'on veut espérer monter au sommet. Il n'y a pas de place au divertissement, l'enjeu est de conserver les apparences de jovialité et de respect tout en restant vigilant et intransigeant. Le tout en consommant les mets et vins les plus raffinés que l'humanité ait connu !",
+        "Où est la torture dans tout ça ? Le twist, figure-toi, est qu'il n'y a aucune toilettes ici."
       ]
     },
     "memories": {
       "title": "L-3478",
       "description": [
         "L'eau de cette mer est si calme qu'on peut y voir le reflet des étoiles et de la lune ! Par moments des vagues viennent troubler sa surface lorsque les sujets y jettent leurs valises. Regarde, ils partent de derrière cette colline, et vont au bout de la digue juste ici pour balancer un bagage à l'eau.",
-        "Ce qu'ils jettent précisément, c'est leurs souvenirs. Des moments, des visages, des lieux… Tout ce qui a construit leur vie. On le leur en défait, pour en faire des copies neuves.",
+        "Ce qu'ils jettent précisément, c'est leurs souvenirs. Des moments, des visages, des lieux… Tout ce qui a construit leur vie. On le leur en défait, pour qu'ils deviennent des copies neuves.",
         "Tu me diras, on pourrait effacer leur mémoire en une fois, c'est vrai. Mais ce procédé est plus intéressant. Il leur faut bien des centaines d'aller-retour pour vider leur esprit de tous leurs souvenirs, un par un. Un temps largement suffisant pour qu'ils prennent conscience de ce qu'ils sont en train de perdre. S'ils étaient pragmatiques, ils prendraient le plus de mémoire possible à chaque trajet, et se dépécheraient de tout jeter pour abréger le plus rapidement leur souffrance. Mais que veux-tu, ils préfèrent s'accrocher désespérément à ce qu'ils peuvent."
       ]
     },
@@ -141,22 +141,22 @@
     "museum": {
       "title": "M-5594",
       "description": [
-        "Admire un peu les œuvres de ce musée ! Plutôt exceptionnelles non ? Nous avons ici tous les plus grands artistes qui ont existé. Ainsi que ceux qui n'ont pas existé, et même ceux entre les deux. Les sujets errent ici en contemplant les tableaux et les sculptures. Et occasionellement, ils tombent sur quelque chose qui leur est familier. Le portrait d'une personne qu'ils ont connu, un lieu dans lequel ils ont vécu, ou même une représentation d'eux-même ! Mais quand ils lisent le descriptif pour en savoir plus, ils découvrent que ce n'est rien d'autre qu'une œuvre d'art. Créée par un artiste qu'ils ne connaissent pas, d'origine lointaine, à une époque où ils n'ont même pas vécu. Même les inspirations et les intentions ne leur permettent pas de rattacher la création à eux-même !",
-        "Plus ils passent de temps ici, plus ils croisent ce genre de travaux, et plus le doute s'installe en eux. Ce qu'ils prenaient comme souvenir est-il finalement fictif ? Cette peinture est-elle familière parce qu'ils l'ont vécu, ou parce qu'ils apprécient les autres œuvres de l'artiste ? Sont-ils juste le produit de l'imagination de quelqu'un d'autre ? À force de mélanger le faux avec le vrai, ils finissent par ne plus faire du tout la différence. On peut alors les cueillir, comme des consciences débarasséees de tout égo. Mais doté d'une sacré culture artistique !"
+        "Admire un peu les œuvres de ce musée ! Plutôt exceptionnelles non ? Nous avons ici tous les plus grands artistes qui ont existé. Ainsi que ceux qui n'ont pas existé, et même ceux entre les deux. Les sujets errent ici en contemplant les tableaux et les sculptures. Et occasionellement, ils tombent sur quelque chose qui leur est familier. Le portrait d'une personne qu'ils ont connu, un lieu dans lequel ils ont vécu, ou même une représentation d'eux-même ! Mais quand ils lisent le descriptif pour en savoir plus, ils découvrent que ce n'est rien d'autre qu'une œuvre d'art. Créée par un artiste qu'ils ne connaissent pas, d'origine lointaine, à une époque où ils n'ont même pas vécu. Même les inspirations et les intentions ne leur permettent pas de former le moindre lien !",
+        "Plus ils passent de temps ici, plus ils croisent ce genre d'œuvres, et plus le doute s'installe en eux. Ce qu'ils prenaient comme souvenir est-il finalement fictif ? Cette peinture est-elle familière parce qu'ils l'ont vécu, ou parce qu'ils apprécient les autres réalisations de l'artiste ? Sont-ils juste le produit de l'imagination de quelqu'un d'autre ? À force de mélanger le faux avec le vrai, ils finissent par ne plus faire du tout la différence. On peut alors les cueillir, comme des consciences débarasséees de tout égo. Mais doté d'une sacré culture artistique !"
       ]
     },
     "island": {
       "title": "O-6766",
       "description": [
         "En 1460, nos architectes ont conçu une île « parfaite ». Ils ont savamment étudié sa structure pour que ses paysages soient plaisants et parfaitement équilibrés. Une variété de terrains offrant des plages, des vallées, des montagnes, des lacs, et même un désert ! Quelques petits villages, ainsi que des ruines, disposés de la façon la plus harmonieuse. Un paradis irréprochable. Ils ont ainsi produits des plans rigoureusement précis, et on a commencé les travaux en utilisant les sujets comme ouvriers.",
-        "Ce sont eux, à la tâche ! Cela fait des siècles qu'ils façonnent cet endroit, en suivant les schémas au millimiètre près. Ils sculptent chaque petite parcelle de terrain, taillent les feuilles des plantes et font pousser leur branche dans le bon sens, déposent les grains de sable un à un, et mesurent le son que fait chaque vague lorsqu'elle vient frapper la côte ! Un travail d'orfèvre… Mais qui n'a jusque-là jamais satisfait les architectes. Au moindre petit écart, ils rasent tout, et leur ordonnent de recommencer.",
+        "Ce sont eux, à la tâche ! Cela fait des siècles qu'ils façonnent cet endroit, en suivant les schémas au millimiètre près. Ils sculptent chaque petite parcelle de terrain, taillent les feuilles des plantes et font pousser leur branche dans le bon sens, déposent les grains de sable un à un, et mesurent le son que fait chaque vague lorsqu'elle vient frapper la côte ! Un travail d'orfèvre… Mais qui n'a à ce jour jamais satisfait les architectes. Au moindre petit écart, ils rasent tout, et leur ordonnent de recommencer.",
         "Oh, à force, ils deviennent plutôt bon. Ils connaissent même certaines sections par cœur. Mais, entre toi et moi, le plan de cette île parfaite est plutôt vieux, et ils prévoient de le mettre bientôt à jour. Ce doit rester un secret bien sûr. On ne veut pas gâcher la surprise aux travailleurs !"
       ]
     },
     "glass": {
       "title": "D-9404",
       "description": [
-        "J'espère que tu n'as pas le vertige ! Ce gratte-ciel accumule plusieurs centaines d'étages. Les sujets en sont les laveurs de vitres. À l'intérieur, ils peuvent apercevoir leurs proches de l'époque où ils vivaient encore. Ils les voient continuer leur vie sans eux, et constatent qu'ils sont facilement remplacés, voire oubliés. Leurs conjoint se remarient, leurs amis font la fête sans eux, leurs parents sont épanouis et leurs enfants trouvent de nouveaux modèles.",
+        "J'espère que tu n'as pas le vertige ! Ce gratte-ciel accumule plusieurs centaines d'étages. Les sujets en sont les laveurs de vitres. À l'intérieur, ils peuvent apercevoir leurs proches de l'époque où ils vivaient encore. Ils les voient continuer leurs vies sans eux, et constatent qu'ils sont facilement remplacés, voire oubliés. Leurs conjoints se remarient, leurs amis font la fête, leurs parents sont épanouis et leurs enfants trouvent de nouveaux modèles.",
         "Ils peuvent crier ou taper sur la paroi autant qu'ils peuvent, ils ne seront pas entendus. Les sujets qui sont condamnés ici avaient tendance à se prendre pour le centre du monde. Ça les déchire de voir que celui-ci tourne finalement très bien sans eux."
       ]
     },
@@ -164,20 +164,20 @@
       "title": "Y-6916",
       "description": [
         "Quoi qu'il arrive, ne les regarde pas. Si tu croises leur regard, tu ne pourras plus t'en défaire. C'est ce qu'ils attendent de toi. Ils t'observent, en ce moment. Comme ils l'ont fait durant toute ta vie, sans que tu t'en apercoives. Dans cette cellule, nous placons les sujets juste à côté d'eux. Ils peuvent entendre leur respiration, sentir leur griffe les frôler… Et percevoir le poids de leur regard, toujours présent.",
-        "Certains sujets arrivent à traverser. Ils ne sont pas libérés pour autant. Ils continuent leur périple aux Enfers, en se sachant épiés. Mais ils ne regardent plus jamais derrière eux, même après une réincarnation, et cultivent une peur des miroirs sans qu'ils ne comprennent pourquoi. Quant à ceux qui se perdent ici… Maintes fois tu as croisé leurs reflets, ils ton't appelé à l'aide, mais te ne les as jamais remarqué."
+        "Certains sujets arrivent à traverser. Ils ne sont pas libérés pour autant. Ils continuent leur périple aux Enfers, en se sachant épiés. Mais ils ne regardent plus jamais derrière eux, même après une réincarnation, et cultivent une peur des miroirs qui échappe à leur compréhension. Quant à ceux qui se perdent ici… Maintes fois tu as croisé leurs reflets, ils ton't appelé à l'aide, mais te ne les as jamais remarqué."
       ]
     },
     "ruins": {
       "title": "J-0905",
       "description": [
-        "Il est difficile d'accepter que tout à une fin. Les plus grandes cités s'émiettent, les empires s'effondrent, les continents sombrent… Tout ce qu'il restera de ta civilisation, c'est ce que tu contemples ici. Des décombres, ruines de bâtiments dont on devine à peine l'ancienne allurle, mélangées à de la cendre et de la végétation envahissante.",
+        "Il est difficile d'accepter que tout à une fin. Les plus grandes cités s'émiettent, les empires s'effondrent, les continents sombrent… Tout ce qu'il restera de ta civilisation, c'est ce que tu contemples ici. Des décombres, ruines de bâtiments dont on devine à peine l'ancienne allure, mélangées à de la cendre et de la végétation envahissante.",
         "Les sujets ont pour mission de déterrer les cadavres et de les identifier. Oui, c'est un spectacle peu râgoutant. Évidemment, tous les corps qu'ils trouvent sont ceux de personnes qu'ils ont connus. Ils sont frappés directement au cœur ! C'est à partir de là qu'ils reconnaissent les lieux. Ceci était un jardin dans lequel ils jouaient. Ça les bureaux où ils travaillaient. Avant, il y avait une épicerie ici, ils y venaient souvent. Toutes ces petites choses qu'ils croyaient avoir oublié ressurgissent, déformées de façon irréversible. Les fragiles piliers porteurs de leurs vies, eux aussi éphémères…"
       ]
     }
   },
   "question": {
     "intro": {
-      "0": "C'est tout ce que j'ai le temps de te faire visiter pour le moment. Mais avant de te ramener à ta cellule, on a le temps de bavarder un peu. Y a t-il une question sur les Enfers que tu souhaiterait me poser ?",
+      "0": "C'est tout ce que j'ai le temps de te faire visiter pour le moment. Mais avant de te ramener à ta cellule, on a le temps de bavarder un peu. Y a t-il une question sur les Enfers que tu souhaiterais me poser ?",
       "1": "On arrive à la fin de notre ballade. Avant de retourner à ta cellule, voudrais-tu me demander quelque chose ?",
       "2": "C'est tout pour cette fois. Si tu veux, je peux encore répondre à une de tes questions.",
       "3": "J'ai passé un plutôt bon moment avec toi ! Pour la peine, demande moi ce que tu veux, et je verrais ce que je peux te révéler.",
@@ -188,20 +188,20 @@
       "1": "Mais j'ai assez parlé. Tu dois vite retourner dans ta cellule avant que je ne me fasse rouspéter ! Je promets que je reviendrai de nouveau.",
       "2": "J'espère que ça répond à ta question. C'est là que l'on se quitte. À la prochaine !",
       "3": "Enfin bref, à présent il faut que tu poursuive ta torture. Eh oui il n'y a pas d'autre moyen ! Mais tu commences à t'y faire, non ?",
-      "4": "C'est tout ce que je peux te dire à ce sujet. Maintenant, je te libères, et laisse profiter de ton supplice. On se revoit… quand on se reverra !"
+      "4": "C'est tout ce que je peux te dire à ce sujet. Maintenant, je te libère, et te laisse profiter de ton supplice. On se revoit… quand on se reverra !"
     },
     "back": "Au travail !",
     "deserve": {
       "title": "Qu'ai-je fait pour mériter d'aller en Enfer ?",
-      "answer": "Ce n'est pas une question de mériter les Enfers ou non. Nous sommes bien au-delà des concepts de bien ou de mal. Nous ne décidons pas nous même de qui nous accueillons. Les gens qui viennent ici sont là pour souffrir, c'est tout. Peut-être parce qu'ils en ont besoin. Peut-être parce qu'ils l'ont voulu. Ou que quelqu'un l'autre l'a souhaité ? La souffrance permet aux âmes de changer. C'est par là qu'elles se débarrasent de leurs impuretés et leurs blessures pour devenir quelqu'un d'autre. Toutes les âmes défuntes n'attérissent pas ici, c'est vrai. Peut-être d'autres vont au Paradis… Sont-elles plus chanceuses ? Poses-toi la question : si l'on te présentait deux opportunités, la première celle de vivre ans un contentement permanent sans jamais évoluer, la deuxième celle de passer par une expérience si éprouvante qu'elle te changera complètement, préfèrerais-tu forcément la première ?"
+      "answer": "Ce n'est pas une question de mériter les Enfers ou non. Nous sommes bien au-delà des concepts de bien ou de mal. Nous ne décidons pas nous même de qui nous accueillons. Les gens qui viennent ici sont là pour souffrir, c'est tout. Peut-être parce qu'ils en ont besoin. Peut-être parce qu'ils l'ont voulu. Ou que quelqu'un d'autre l'a souhaité ? La souffrance permet aux âmes de changer. C'est par là qu'elles se débarrasent de leurs impuretés et leurs blessures pour devenir quelqu'un d'autre. Toutes les âmes n'atterrissent pas ici, c'est vrai. Peut-être d'autres vont au Paradis… Sont-elles plus chanceuses ? Pose-toi la question : si l'on te présentait deux opportunités, la première celle de vivre ans un contentement permanent sans jamais évoluer, la deuxième celle de passer par une expérience si éprouvante qu'elle te changera complètement, préfèrerais-tu forcément la première ?"
     },
     "eternity": {
       "title": "Vais-je rester ici pour l'éternité ?",
-      "answer": "Non ! Personne ne reste aux Enfers pour toujours. Tu imagines facilement les problèmes de logistique que ça représenterait. Et même si nous proposons des millions de tortures, on finit forcément par y devenir insensible. Il arrive un moment où les sujets torturés se lassent de cet endroit. Leurs peines les a tellement impacté qu'ils n'ont plus rien à voir avec la personne qu'ils étaient en entrant. Arrive un moment où… Je ne sais pas, ils ont tiré les leçons de leur punition, ou bien se sont débarassé de tout ce qui les raccrochait à leur ancienne existence et à ce lieu. On les laisse alors partir. Tu vois la tour au loin ? C'est la sortie. Un jour, tu y passeras toi aussi. Mais ne t'en préoccupes pas trop d'ici là."
+      "answer": "Non ! Personne ne reste aux Enfers pour toujours. Tu imagines facilement les problèmes de logistique que ça représenterait. Et même si nous proposons des millions de tortures, on finit forcément par y devenir insensible. Il arrive un moment où les sujets torturés se lassent de cet endroit. Leurs peines les a tellement impacté qu'ils n'ont plus rien à voir avec la personne qu'ils étaient en entrant. Arrive un moment où… Je ne sais pas, ils ont tiré les leçons de leur punition, ou bien se sont débarassé de tout ce qui les raccrochait à leur ancienne existence et à ce lieu. On les laisse alors partir. Tu vois la tour au loin ? C'est la sortie. Un jour, tu y passeras toi aussi. Mais ne t'en préoccupe pas trop d'ici là."
     },
     "tortures": {
       "title": "Comment sont choisies les tortures ?",
-      "answer": "Nos architectes ne manquent pas de créativités quand il s'agit d'inventer des tortures ! Ils s'efforcent au mieux pour trouver des châtiments qui correspondent au profil des victimes. Toucher directement leurs à peurs, leurs désirs, leurs traumatismes, leurs remords… Le plus souvent, nous allons chercher l'inspiration dans vos rêves. Généralement vos cauchemars. Eux aussi nous les fabriquons en partie, d'ailleurs. Il n'y a rien de mieux pour atteindre le subconscient ! Ça a aussi l'avantage de proposer des Enfers avec lesquels vous êtes déjà familier. Quiconque attérit aux Enfers réalise qu'il y a déjà été depuis bien longtemps. On y endure des peines atroces, certes, mais on y est comme chez soi."
+      "answer": "Nos architectes ne manquent pas de créativités quand il s'agit d'inventer des tortures ! Ils s'efforcent au mieux pour trouver des châtiments qui correspondent au profil des victimes. Toucher directement leurs à peurs, leurs désirs, leurs traumatismes, leurs remords… Le plus souvent, nous allons chercher l'inspiration dans vos rêves. Généralement vos cauchemars. Eux aussi nous les fabriquons en partie, d'ailleurs. Il n'y a rien de mieux pour atteindre le subconscient ! Ça a aussi l'avantage de proposer des Enfers avec lesquels vous êtes déjà familiers. Quiconque atterrit aux Enfers réalise qu'il y a déjà été depuis bien longtemps. On y endure des peines atroces, certes, mais on y est comme chez soi."
     },
     "pretty": {
       "title": "Comment se fait-il que l'Enfer soit un endroit aussi joli ?",
@@ -209,32 +209,32 @@
     },
     "who": {
       "title": "Qui êtes vous ?",
-      "answer": "Un simple employé des Enfers. Chargé de l'entretien des cellules, et de la surveillance des sujets. Et de temps à autre, j'aime tenir compagnie à ces derniers. Je crois que ça fait aussi partie de mes responsabilités ! Avant ça, j'ai aussi été un condamné ici. J'ai purgé ma peine, et je me suis attaché à cet endroit. Ce n'est pas un cadre très joyeux, je te l'accordes, et il m'arrive encore d'avoir quelques remords vis-à-vis de l'éthique de mon travail. Mais… J'y trouve un sens, d'une certaine manière. Un équilibre qui me satisfait et que je ne veux pas quitter. Pas tout de suite, en tout cas."
+      "answer": "Un simple employé des Enfers. Chargé de l'entretien des cellules, et de la surveillance des sujets. Et de temps à autre, j'aime tenir compagnie à ces derniers. Je crois que ça fait aussi partie de mes responsabilités ! Avant ça, j'ai aussi été un condamné ici. J'ai purgé ma peine, et je me suis attaché à cet endroit. Ce n'est pas un cadre très joyeux, je te l'accorde, et il m'arrive encore d'avoir quelques remords vis-à-vis de l'éthique de mon travail. Mais… J'y trouve un sens, d'une certaine manière. Un équilibre qui me satisfait et que je ne veux pas quitter. Pas tout de suite, en tout cas."
     }
   },
   "before-end": {
     "announce": "Cela fait un bon moment que tu purges ta peine ici. Tu fais peine à voir, mais tu sembles en avoir acquis quelque chose. Je pense qu'il est temps pour toi… de passer à la suite.",
     "interrogation": "Que voulez-vous dire ?",
     "leaving": "Le moment est venu pour toi de quitter les Enfers. Ils n'ont plus rien à t'apporter. Tu n'es plus obligé de subir ton supplice, tu peux partir.",
-    "time": "Enfin, rien ne presse, bien sûr. Profites autant que tu veux du paysage une dernière fois. Quand tu te sentiras prêt, nous entrerons ensemble dans la Tour de sortie.",
+    "time": "Enfin, rien ne presse, bien sûr. Profite autant que tu veux du paysage une dernière fois. Quand tu te sentiras prêt, nous entrerons ensemble dans la Tour de sortie.",
     "ready": "Très bien, allons-y."
   },
   "end": {
     "suspension": "…",
     "window": "Derrière la vitre, c'est… ?",
     "car": "C'est toi oui. Dans la voiture, à des dizaines de mètres sous l'eau déjà.",
-    "waiting": "C'est… Ce qui t'attend, une fois que tu seras sorti d'ici.",
+    "waiting": "C'est… ce qui t'attend, une fois que tu seras sorti d'ici.",
     "not-dead": "Vous voulez dire que je ne suis pas mort !?",
-    "second": "Ne t'emballes pas, il ne te reste tout au plus qu'une seconde. L'eau s'est engouffrée dans tes poumons jusqu'à en déborder, et ton cœur est juste sur le point de lacher. Tu as épuisé tes dernières forces en tentant veinement de décrocher la ceinture de sécurité. C'est définitivement la mort qui t'attend.",
+    "second": "Ne t'emballe pas, il ne te reste tout au plus qu'une seconde. L'eau s'est engouffrée dans tes poumons jusqu'à en déborder, et ton cœur est juste sur le point de lacher. Tu as épuisé tes dernières forces en tentant veinement de décrocher la ceinture de sécurité. C'est définitivement la mort qui t'attend.",
     "rescue": "Dans tes derniers instants, quand tu ne sentais plus rien d'autre que la douleur, ta conscience s'est échappée. Instinct de survie. Nous l'avons recueillie comme il se doit. Les Enfers sont très déplaisants, mais ils offrent du répit à ceux qui s'y refugent. Peut-être pas l'éternité, mais au moins quelques siècles ou millénaires de souffrance, pour oublier.",
     "no-deads": "Mais ce n'est pas l'au-delà.",
     "really": "Attendez, est-ce que ça veut dire que ce n'est que mon imagination ?",
-    "meaning": "Que veux-tu que je réponde à ça ? Tout ce que je sais avec certitude, c'est qu'ici il y a du sens. Il a forcément été créé par quelqu'un. Là dehors, en revanche, les choses sont telles qu'elles sont, c'est tout.",
-    "obligation": "Pour toi en tout cas, elles sont plutôt dures. Ce n'est pas très plaisant, je sais. Mais il faut bien y retourner à un moment ou un autre.",
+    "meaning": "Que veux-tu que je réponde à ça ? Tout ce que je sais avec certitude, c'est qu'ici il y a du sens. Sûrement créé par quelqu'un. Là dehors, en revanche, les choses sont telles qu'elles sont, c'est tout.",
+    "obligation": "Pour toi en tout cas, elles sont plutôt sombres. Ce n'est pas très plaisant, je sais. Mais il faut bien y retourner à un moment ou un autre.",
     "hurtful": "Est-ce que ce sera douloureux ?",
     "pain": "Très. Je suis désolé. Mais ça ne durera pas longtemps.",
     "after": "Après ça… Je n'ai aucune idée de ce qui t'attend. Probablement rien, pour être franc. Je ne sais pas si c'est une bonne chose ou non. Ça n'a pas vraiment à être « bon », ou « mauvais ».",
-    "ready": "Dès que tu te sens prêt, tu peux sortir. Et tu affronteras ce qu'il te reste à vivre. Mais encore une fois, nous ne t'obligeons à rien. Tu peux rester ici autant de temps que nécessaire, et tu partira quand tu le souhaiteras.",
+    "ready": "Dès que tu te sens prêt, tu peux sortir. Et tu affronteras ce qu'il te reste à vivre. Mais encore une fois, nous ne t'obligeons à rien. Tu peux rester ici autant de temps que nécessaire, et tu partiras quand tu le souhaiteras.",
     "end": "Ok, je suis prêt à partir.",
     "back": "J'ai besoin d'un peu de temps…",
     "understand": "Je comprends. Dans ce cas, je vais te ramener à ta cellule. Tu pourras y continuer ta peine jusqu'à ce que tu te sentiras le courage de sortir. Je ne pourrai plus te rendre visite cependant. C'est ici que nos chemins se séparent.",
