@@ -224,7 +224,7 @@
     "car": "C'est toi oui. Dans la voiture, à des dizaines de mètres sous l'eau déjà.",
     "waiting": "C'est… Ce qui t'attend, une fois que tu seras sorti d'ici.",
     "not-dead": "Vous voulez dire que je ne suis pas mort !?",
-    "second": "Ne t'emballes pas, il te reste tout au plus qu'une seconde. L'eau s'est engouffrée dans tes poumons jusqu'à en déborder, et ton cœur est juste sur le point de lacher. Tu as épuisé tes dernières forces en tentant veinement de décrocher la ceinture de sécurité. C'est définitivement la fin qui t'attend.",
+    "second": "Ne t'emballes pas, il ne te reste tout au plus qu'une seconde. L'eau s'est engouffrée dans tes poumons jusqu'à en déborder, et ton cœur est juste sur le point de lacher. Tu as épuisé tes dernières forces en tentant veinement de décrocher la ceinture de sécurité. C'est définitivement la mort qui t'attend.",
     "rescue": "Dans tes derniers instants, quand tu ne sentais plus rien d'autre que la douleur, ta conscience s'est échappée. Instinct de survie. Nous l'avons recueillie comme il se doit. Les Enfers sont très déplaisants, mais ils offrent du répit à ceux qui s'y refugent. Peut-être pas l'éternité, mais au moins quelques siècles ou millénaires de souffrance, pour oublier.",
     "no-deads": "Mais ce n'est pas l'au-delà.",
     "really": "Attendez, est-ce que ça veut dire que ce n'est que mon imagination ?",
@@ -238,5 +238,10 @@
     "back": "J'ai besoin d'un peu de temps…",
     "understand": "Je comprends. Dans ce cas, je vais te ramener à ta cellule. Tu pourras y continuer ta peine jusqu'à ce que tu te sentiras le courage de sortir. Je ne pourrai plus te rendre visite cependant. C'est ici que nos chemins se séparent.",
     "thank": "Merci."
+  },
+  "credits": {
+    "author": "Écrit et réalisé par Itooh",
+    "date": "Septembre 2020",
+    "goodbye": "Au revoir, l'ami."
   }
 }

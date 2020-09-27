@@ -46,7 +46,7 @@
           @end="onEnd"
         />
 
-        <div v-else-if="state.screen === GameScreen.Credits">pouet</div>
+        <screen-credits v-else-if="state.screen === GameScreen.Credits" />
       </transition>
     </background-landscape>
   </main>
@@ -63,6 +63,7 @@ import ScreenCell from "@/components/screens/screen-cell.vue";
 import ScreenQuestions from "@/components/screens/screen-questions.vue";
 import ScreenBeforeEnd from "@/components/screens/screen-before-end.vue";
 import ScreenEnd from "@/components/screens/screen-end.vue";
+import ScreenCredits from "@/components/screens/screen-credits.vue";
 
 import "@/styles/fonts.css";
 import "@/styles/screen.css";
@@ -172,6 +173,7 @@ export default defineComponent({
     ScreenQuestions,
     ScreenBeforeEnd,
     ScreenEnd,
+    ScreenCredits,
   },
 });
 </script>
