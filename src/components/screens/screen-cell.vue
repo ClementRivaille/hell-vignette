@@ -1,33 +1,36 @@
 <template>
-  <div class="screen cell" :style="{ background: cell.color }">
-    <div class="description">
-      <ui-paragraph :color="cell.black ? TextColor.Black : TextColor.White">
-        <p v-for="i in cell.nbParagraphs" :key="`${cell.id}.${i}`">
-          {{ $t(`cells.${cell.id}.description.${i - 1}`) }}
-        </p>
-      </ui-paragraph>
+  <ui-screen :color="cell.color">
+    <div class="cell">
+      <div class="description">
+        <ui-paragraph :color="cell.black ? TextColor.Black : TextColor.White">
+          <p v-for="i in cell.nbParagraphs" :key="`${cell.id}.${i}`">
+            {{ $t(`cells.${cell.id}.description.${i - 1}`) }}
+          </p>
+        </ui-paragraph>
+      </div>
+      <img class="image" :src="imageSrc" />
+      <door-button @click="$emit('exit')">{{ $t("cells.exit") }}</door-button>
     </div>
-    <img class="image" :src="imageSrc" />
-    <door-button @click="$emit('exit')">{{ $t('cells.exit') }}</door-button>
-  </div>
+  </ui-screen>
 </template>
 
 <script lang="ts">
-import { CellConfig } from '@/utils/cells';
-import Vue, { defineComponent } from 'vue';
-import UiParagraph, { TextColor } from '@/components/ui/ui-paragraph.vue';
-import DoorButton from '@/components/ui/door-button.vue';
+import { CellConfig } from "@/utils/cells";
+import Vue, { defineComponent } from "vue";
+import UiParagraph, { TextColor } from "@/components/ui/ui-paragraph.vue";
+import DoorButton from "@/components/ui/door-button.vue";
+import UiScreen from "@/components/ui/ui-screen.vue";
 
 export default defineComponent({
-  name: 'screen-cell',
+  name: "screen-cell",
   props: {
     cell: {
       type: Object as () => CellConfig,
       required: true,
     },
   },
-  emits: ['exit'],
-  components: { UiParagraph, DoorButton },
+  emits: ["exit"],
+  components: { UiParagraph, DoorButton, UiScreen },
   setup: (props) => {
     return { TextColor, imageSrc: require(`@/assets/images/test.png`) };
   },

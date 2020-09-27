@@ -1,69 +1,72 @@
 <template>
-  <div class="screen">
-    <transition name="screen-fade" mode="out-in">
-      <div class="torture" v-if="!state.displayIntro">
-        <div class="prompt">
-          <div class="instructions">{{ $t('torture.instruction') }}</div>
-          <div class="code">{{ state.prompt }}</div>
-        </div>
+  <ui-screen color="black">
+    <div class="torture-screen">
+      <transition name="screen-fade" mode="out-in">
+        <div class="torture" v-if="!state.displayIntro">
+          <div class="prompt">
+            <div class="instructions">{{ $t("torture.instruction") }}</div>
+            <div class="code">{{ state.prompt }}</div>
+          </div>
 
-        <div class="typed">
-          {{ state.typed }}
-        </div>
+          <div class="typed">
+            {{ state.typed }}
+          </div>
 
-        <div class="help">
-          <div class="exit" v-if="state.score >= 0">
-            <button-link @click="exit">{{
-              $t(`torture.exit.${level}`)
-            }}</button-link>
+          <div class="help">
+            <div class="exit" v-if="state.score >= 0">
+              <button-link @click="exit">{{
+                $t(`torture.exit.${level}`)
+              }}</button-link>
+            </div>
+          </div>
+
+          <div class="error" v-if="state.displayError">
+            <span class="alert">{{ $t("torture.error") }} </span>
           </div>
         </div>
-
-        <div class="error" v-if="state.displayError">
-          <span class="alert">{{ $t('torture.error') }} </span>
+        <div class="intro" v-else-if="state.displayIntro">
+          <ui-paragraph
+            ><p>{{ $t("torture.intro") }}</p></ui-paragraph
+          >
+          <button-link @click="exit(true)">{{
+            $t("torture.intro-exit")
+          }}</button-link>
         </div>
-      </div>
-      <div class="intro" v-else-if="state.displayIntro">
-        <ui-paragraph
-          ><p>{{ $t('torture.intro') }}</p></ui-paragraph
-        >
-        <button-link @click="exit(true)">{{
-          $t('torture.intro-exit')
-        }}</button-link>
-      </div>
-    </transition>
-  </div>
+      </transition>
+    </div>
+  </ui-screen>
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, onUnmounted, reactive } from 'vue';
-import ButtonLink from '@/components/ui/button-link.vue';
-import UiParagraph from '@/components/ui/ui-paragraph.vue';
+import { defineComponent, onMounted, onUnmounted, reactive } from "vue";
+import ButtonLink from "@/components/ui/button-link.vue";
+import UiParagraph from "@/components/ui/ui-paragraph.vue";
+import UiScreen from "@/components/ui/ui-screen.vue";
 
-const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
+const characters = "abcdefghijklmnopqrstuvwxyz0123456789";
 export default defineComponent({
-  name: 'screen-torture',
+  name: "screen-torture",
   props: {
     level: {
       type: Number,
       required: true,
     },
   },
-  emit: ['exit'],
-  components: { ButtonLink, UiParagraph },
+  emit: ["exit"],
+  components: { ButtonLink, UiParagraph, UiScreen },
   setup(props, context) {
     const state = reactive({
       locked: false,
       displayError: false,
-      prompt: '',
-      typed: '',
+      prompt: "",
+      typed: "",
       cursor: 0,
       score: 0,
       displayIntro: false,
     });
 
     const generatePrompt = () => {
-      let prompt = '';
+      let prompt = "";
       const length = 8 + Math.floor(Math.random() * 4);
       for (let i = 0; i < length; i++) {
         let char = characters.charAt(
@@ -79,7 +82,7 @@ export default defineComponent({
     generatePrompt();
 
     const reset = () => {
-      state.typed = '';
+      state.typed = "";
       state.cursor = 0;
       generatePrompt();
     };
@@ -113,7 +116,7 @@ export default defineComponent({
       if (!characters.includes(pressed.toLowerCase())) return;
       state.typed += pressed;
 
-      const char = state.prompt.charAt(state.cursor) || '';
+      const char = state.prompt.charAt(state.cursor) || "";
       if (char === pressed) {
         state.cursor++;
         if (state.cursor === state.prompt.length) {
@@ -124,14 +127,14 @@ export default defineComponent({
       }
     };
 
-    onMounted(() => window.addEventListener('keydown', onKeyDown));
-    onUnmounted(() => window.removeEventListener('keydown', onKeyDown));
+    onMounted(() => window.addEventListener("keydown", onKeyDown));
+    onUnmounted(() => window.removeEventListener("keydown", onKeyDown));
 
     function exit(force = false) {
       if (props.level === 0 && !force) {
         state.displayIntro = true;
       } else {
-        context.emit('exit');
+        context.emit("exit");
       }
     }
 
@@ -141,8 +144,7 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.screen {
-  background-color: #000000;
+.torture-screen {
   display: flex;
   flex-direction: column;
 }

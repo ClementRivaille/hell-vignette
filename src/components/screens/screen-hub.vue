@@ -1,30 +1,33 @@
 <template>
-  <div class="screen hub">
-    <ui-paragraph>
-      {{ first ? $t(`hub.text-${level}`) : $t('hub.next') }}
-    </ui-paragraph>
-    <div class="cells">
-      <door-button
-        class="cell"
-        v-for="cell in cells"
-        :key="cell"
-        @click="open(cell)"
-        :style="getCellPosition(cell)"
-      >
-        {{ $t(`cells.${cell}.title`) }}
-      </door-button>
+  <ui-screen>
+    <div class="hub">
+      <ui-paragraph>
+        {{ first ? $t(`hub.text-${level}`) : $t("hub.next") }}
+      </ui-paragraph>
+      <div class="cells">
+        <door-button
+          class="cell"
+          v-for="cell in cells"
+          :key="cell"
+          @click="open(cell)"
+          :style="getCellPosition(cell)"
+        >
+          {{ $t(`cells.${cell}.title`) }}
+        </door-button>
+      </div>
     </div>
-  </div>
+  </ui-screen>
 </template>
 
 <script lang="ts">
-import { defineComponent, StyleHTMLAttributes } from 'vue';
-import UiParagraph from '@/components/ui/ui-paragraph.vue';
-import DoorButton from '@/components/ui/door-button.vue';
-import { cellsConfigs } from '@/utils/cells';
+import { defineComponent, StyleHTMLAttributes } from "vue";
+import UiParagraph from "@/components/ui/ui-paragraph.vue";
+import DoorButton from "@/components/ui/door-button.vue";
+import { cellsConfigs } from "@/utils/cells";
+import UiScreen from "@/components/ui/ui-screen.vue";
 
 export default defineComponent({
-  name: 'screen-hub',
+  name: "screen-hub",
   props: {
     level: {
       type: Number,
@@ -38,7 +41,7 @@ export default defineComponent({
       type: Boolean,
     },
   },
-  emits: ['open'],
+  emits: ["open"],
   setup(props, context) {
     const getCellPosition = (cell: string) => {
       const cellConfig = cellsConfigs.find((config) => config.id === cell);
@@ -53,12 +56,12 @@ export default defineComponent({
       };
     };
     const open = (cell: string) => {
-      context.emit('open', cell);
+      context.emit("open", cell);
     };
 
     return { getCellPosition, open };
   },
-  components: { UiParagraph, DoorButton },
+  components: { UiParagraph, DoorButton, UiScreen },
 });
 </script>
 

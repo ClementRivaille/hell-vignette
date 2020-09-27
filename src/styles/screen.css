@@ -1,21 +1,3 @@
-.screen {
-  position: absolute;
-  top: 0;
-  min-height: 100vh;
-  max-height: 10vh;
-  overflow: auto;
-  width: 100vw;
-  padding: 5rem 4rem;
-  /* padding-bottom: 2rem; */
-  box-sizing: border-box;
-}
-
-.screen:after {
-  content: ' ';
-  display: block;
-  height: 2rem;
-}
-
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 1s;

@@ -1,40 +1,43 @@
 <template>
-  <div class="screen questions">
-    <transition name="screen-fade" mode="out-in">
-      <div class="asking" v-if="!selected">
-        <ui-paragraph>
-          {{ $t(`question.intro.${level}`) }}
-        </ui-paragraph>
-        <ul class="list">
-          <li v-for="question in questions" :key="question">
-            <question-link @click="choose(question)">{{
-              $t(`question.${question}.title`)
-            }}</question-link>
-          </li>
-        </ul>
-      </div>
+  <ui-screen>
+    <div class="questions">
+      <transition name="screen-fade" mode="out-in">
+        <div class="asking" v-if="!selected">
+          <ui-paragraph>
+            {{ $t(`question.intro.${level}`) }}
+          </ui-paragraph>
+          <ul class="list">
+            <li v-for="question in questions" :key="question">
+              <question-link @click="choose(question)">{{
+                $t(`question.${question}.title`)
+              }}</question-link>
+            </li>
+          </ul>
+        </div>
 
-      <div class="answering" v-else>
-        <ui-paragraph class="answer">
-          <p>{{ $t(`question.${selected}.answer`) }}</p>
-          <p>{{ $t(`question.exit.${level}`) }}</p>
-        </ui-paragraph>
-        <button-link class="back-link" @click="$emit('leave', selected)">{{
-          $t('question.back')
-        }}</button-link>
-      </div>
-    </transition>
-  </div>
+        <div class="answering" v-else>
+          <ui-paragraph class="answer">
+            <p>{{ $t(`question.${selected}.answer`) }}</p>
+            <p>{{ $t(`question.exit.${level}`) }}</p>
+          </ui-paragraph>
+          <button-link class="back-link" @click="$emit('leave', selected)">{{
+            $t("question.back")
+          }}</button-link>
+        </div>
+      </transition>
+    </div>
+  </ui-screen>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
-import UiParagraph from '@/components/ui/ui-paragraph.vue';
-import ButtonLink from '@/components/ui/button-link.vue';
-import QuestionLink from '@/components/ui/question-link.vue';
+import { defineComponent, ref } from "vue";
+import UiParagraph from "@/components/ui/ui-paragraph.vue";
+import ButtonLink from "@/components/ui/button-link.vue";
+import QuestionLink from "@/components/ui/question-link.vue";
+import UiScreen from "@/components/ui/ui-screen.vue";
 
 export default defineComponent({
-  name: 'screen-questions',
+  name: "screen-questions",
   props: {
     level: {
       type: Number,
@@ -45,7 +48,7 @@ export default defineComponent({
       required: true,
     },
   },
-  emits: ['leave'],
+  emits: ["leave"],
   setup() {
     const selected = ref<string | undefined>();
     const choose = (question: string) => {
@@ -54,7 +57,7 @@ export default defineComponent({
 
     return { selected, choose };
   },
-  components: { UiParagraph, ButtonLink, QuestionLink },
+  components: { UiParagraph, ButtonLink, QuestionLink, UiScreen },
 });
 </script>
 

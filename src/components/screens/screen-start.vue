@@ -1,23 +1,28 @@
 <template>
-  <div class="start screen">
-    <div>
-      <h1>{{ $t('start.title') }}</h1>
-      <div class="menu">
-        <a href="#" @click.prevent="begin">{{ $t('start.begin') }}</a>
+  <ui-screen color="#2e2e2e">
+    <div class="start">
+      <div>
+        <h1>{{ $t("start.title") }}</h1>
+        <div class="menu">
+          <a href="#" @click.prevent="begin">{{ $t("start.begin") }}</a>
+        </div>
       </div>
     </div>
-  </div>
+  </ui-screen>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from "vue";
+import UiScreen from "@/components/ui/ui-screen.vue";
+
 export default defineComponent({
-  name: 'screen-start',
-  emits: ['begin'],
+  name: "screen-start",
+  components: { UiScreen },
+  emits: ["begin"],
   setup(_props, context) {
     return {
       begin() {
-        context.emit('begin');
+        context.emit("begin");
       },
     };
   },
@@ -26,7 +31,6 @@ export default defineComponent({
 
 <style scoped>
 .start {
-  background-color: #2e2e2e;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

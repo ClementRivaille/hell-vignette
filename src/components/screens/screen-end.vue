@@ -1,27 +1,30 @@
 <template>
-  <div class="screen end">
-    <img class="window" src="@/assets/images/test.png" />
-    <ui-dialog
-      class="end-dialogs"
-      :dialogs="endDialogs"
-      @continue="onContinue($event)"
-    />
-  </div>
+  <ui-screen color="#5a0101">
+    <div class="end">
+      <img class="window" src="@/assets/images/test.png" />
+      <ui-dialog
+        class="end-dialogs"
+        :dialogs="endDialogs"
+        @continue="onContinue($event)"
+      />
+    </div>
+  </ui-screen>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import UiDialog from '@/components/ui/ui-dialog.vue';
-import { endDialogs } from '@/utils/dialogs';
+import { defineComponent } from "vue";
+import UiDialog from "@/components/ui/ui-dialog.vue";
+import { endDialogs } from "@/utils/dialogs";
+import UiScreen from "@/components/ui/ui-screen.vue";
 
 export default defineComponent({
-  name: 'screen-before-end',
-  components: { UiDialog },
-  emits: ['return', 'end'],
+  name: "screen-before-end",
+  components: { UiDialog, UiScreen },
+  emits: ["return", "end"],
   setup(props, context) {
     const onContinue = (refuse: boolean) => {
-      console.log('HEY', refuse);
-      context.emit(refuse ? 'return' : 'end');
+      console.log("HEY", refuse);
+      context.emit(refuse ? "return" : "end");
     };
     return { endDialogs, onContinue };
   },
@@ -30,7 +33,6 @@ export default defineComponent({
 
 <style scoped>
 .end {
-  background: #5a0101;
   display: flex;
   flex-direction: column;
   align-items: center;
