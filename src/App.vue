@@ -7,6 +7,8 @@
           @begin="onBegin"
         />
 
+        <screen-loading v-else-if="state.screen === GameScreen.Loading" />
+
         <screen-torture
           v-else-if="state.screen === GameScreen.Torture"
           :level="state.level"
@@ -53,7 +55,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, reactive } from "vue";
+import { computed, defineComponent, onMounted, reactive } from "vue";
 import { GameScreen } from "@/utils/screens";
 import BackgroundLandscape from "@/components/ui/background-landscape.vue";
 import ScreenStart from "@/components/screens/screen-start.vue";
@@ -64,10 +66,12 @@ import ScreenQuestions from "@/components/screens/screen-questions.vue";
 import ScreenBeforeEnd from "@/components/screens/screen-before-end.vue";
 import ScreenEnd from "@/components/screens/screen-end.vue";
 import ScreenCredits from "@/components/screens/screen-credits.vue";
+import screenLoading from "./components/screens/screen-loading.vue";
 
 import "@/styles/fonts.css";
 import "@/styles/screen.css";
 import { CellConfig, cellsConfigs } from "./utils/cells";
+import { loadSounds } from "./utils/audio-manager";
 
 interface GameState {
   screen: GameScreen;
@@ -84,7 +88,7 @@ export default defineComponent({
   name: "App",
   setup() {
     const state: GameState = reactive({
-      screen: GameScreen.Start,
+      screen: GameScreen.Loading,
       level: 0,
       lastLevel: computed(() => state.level > NB_LEVELS),
       cells: [],
@@ -94,7 +98,12 @@ export default defineComponent({
 
     const transition = reactive({
       name: "fade",
-      mode: "out-in",
+      mode: "in-out",
+    });
+
+    onMounted(async () => {
+      await loadSounds();
+      state.screen = GameScreen.Start;
     });
 
     const onBegin = () => {
@@ -174,6 +183,7 @@ export default defineComponent({
     ScreenBeforeEnd,
     ScreenEnd,
     ScreenCredits,
+    screenLoading,
   },
 });
 </script>
@@ -182,8 +192,8 @@ export default defineComponent({
 main {
   min-height: 100vh;
   width: 100%;
-  background: rgb(8, 12, 238);
-  background: linear-gradient(rgb(75, 113, 240), rgb(8, 12, 238));
+  background: rgb(11, 13, 125);
+  background: linear-gradient(rgb(95, 116, 187), rgb(11, 13, 125));
 
   color: white;
   font-family: sans;

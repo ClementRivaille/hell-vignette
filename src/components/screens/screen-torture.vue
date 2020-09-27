@@ -52,8 +52,9 @@ import {
 import ButtonLink from "@/components/ui/button-link.vue";
 import UiParagraph from "@/components/ui/ui-paragraph.vue";
 import UiScreen from "@/components/ui/ui-screen.vue";
+import { playCorrect, playTypewriter, playWrong } from "@/utils/audio-manager";
 
-const REQUIRED_SCORE = 0;
+const REQUIRED_SCORE = 4;
 
 interface TortureState {
   locked: boolean;
@@ -88,13 +89,13 @@ export default defineComponent({
       typed: "",
       cursor: 0,
       score: 0,
-      free: computed(() => state.score >= REQUIRED_SCORE),
+      free: false,
       displayIntro: false,
     });
 
     const generatePrompt = () => {
       let prompt = "";
-      const length = 8 + Math.floor(Math.random() * 4);
+      const length = 6 + Math.floor(Math.random() * 5);
       for (let i = 0; i < length; i++) {
         let char = characters.charAt(
           Math.floor(Math.random() * characters.length)
@@ -117,6 +118,11 @@ export default defineComponent({
     const onSuccess = () => {
       state.score++;
       state.locked = true;
+      playCorrect();
+
+      if (state.score >= REQUIRED_SCORE) {
+        state.free = true;
+      }
 
       setTimeout(() => {
         state.locked = false;
@@ -126,6 +132,7 @@ export default defineComponent({
 
     const onError = () => {
       state.score = Math.max(state.score - 1, 0);
+      playWrong();
 
       state.locked = true;
       state.displayError = true;
@@ -142,6 +149,7 @@ export default defineComponent({
       const pressed = e.key;
       if (!characters.includes(pressed.toLowerCase())) return;
       state.typed += pressed;
+      playTypewriter();
 
       const char = state.prompt.charAt(state.cursor) || "";
       if (char === pressed) {

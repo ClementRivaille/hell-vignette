@@ -23,7 +23,6 @@ export default defineComponent({
   emits: ["return", "end"],
   setup(props, context) {
     const onContinue = (refuse: boolean) => {
-      console.log("HEY", refuse);
       context.emit(refuse ? "return" : "end");
     };
     return { endDialogs, onContinue };
