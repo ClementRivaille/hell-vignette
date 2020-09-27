@@ -4,7 +4,7 @@
       <transition name="screen-fade" mode="out-in">
         <div class="torture" v-if="!state.displayIntro">
           <div class="prompt">
-            <div class="instructions">{{ $t("torture.instruction") }}</div>
+            <div class="instructions">{{ $t('torture.instruction') }}</div>
             <div class="code">{{ state.prompt }}</div>
           </div>
 
@@ -25,15 +25,15 @@
           </div>
 
           <div class="error" v-if="state.displayError">
-            <span class="alert">{{ $t("torture.error") }} </span>
+            <span class="alert">{{ $t('torture.error') }} </span>
           </div>
         </div>
         <div class="intro" v-else-if="state.displayIntro">
           <ui-paragraph
-            ><p>{{ $t("torture.intro") }}</p></ui-paragraph
+            ><p>{{ $t('torture.intro') }}</p></ui-paragraph
           >
           <button-link @click="exit(true)">{{
-            $t("torture.intro-exit")
+            $t('torture.intro-exit')
           }}</button-link>
         </div>
       </transition>
@@ -48,11 +48,11 @@ import {
   onMounted,
   onUnmounted,
   reactive,
-} from "vue";
-import ButtonLink from "@/components/ui/button-link.vue";
-import UiParagraph from "@/components/ui/ui-paragraph.vue";
-import UiScreen from "@/components/ui/ui-screen.vue";
-import { playCorrect, playTypewriter, playWrong } from "@/utils/audio-manager";
+} from 'vue';
+import ButtonLink from '@/components/ui/button-link.vue';
+import UiParagraph from '@/components/ui/ui-paragraph.vue';
+import UiScreen from '@/components/ui/ui-screen.vue';
+import { playCorrect, playTypewriter, playWrong } from '@/utils/audio-manager';
 
 const REQUIRED_SCORE = 4;
 
@@ -67,9 +67,9 @@ interface TortureState {
   displayIntro: boolean;
 }
 
-const characters = "abcdefghijklmnopqrstuvwxyz0123456789";
+const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
 export default defineComponent({
-  name: "screen-torture",
+  name: 'screen-torture',
   props: {
     level: {
       type: Number,
@@ -79,14 +79,14 @@ export default defineComponent({
       type: Boolean,
     },
   },
-  emit: ["exit"],
+  emit: ['exit'],
   components: { ButtonLink, UiParagraph, UiScreen },
   setup(props, context) {
     const state: TortureState = reactive({
       locked: false,
       displayError: false,
-      prompt: "",
-      typed: "",
+      prompt: '',
+      typed: '',
       cursor: 0,
       score: 0,
       free: false,
@@ -94,7 +94,7 @@ export default defineComponent({
     });
 
     const generatePrompt = () => {
-      let prompt = "";
+      let prompt = '';
       const length = 6 + Math.floor(Math.random() * 5);
       for (let i = 0; i < length; i++) {
         let char = characters.charAt(
@@ -110,7 +110,7 @@ export default defineComponent({
     generatePrompt();
 
     const reset = () => {
-      state.typed = "";
+      state.typed = '';
       state.cursor = 0;
       generatePrompt();
     };
@@ -151,7 +151,7 @@ export default defineComponent({
       state.typed += pressed;
       playTypewriter();
 
-      const char = state.prompt.charAt(state.cursor) || "";
+      const char = state.prompt.charAt(state.cursor) || '';
       if (char === pressed) {
         state.cursor++;
         if (state.cursor === state.prompt.length) {
@@ -162,14 +162,14 @@ export default defineComponent({
       }
     };
 
-    onMounted(() => window.addEventListener("keydown", onKeyDown));
-    onUnmounted(() => window.removeEventListener("keydown", onKeyDown));
+    onMounted(() => window.addEventListener('keydown', onKeyDown));
+    onUnmounted(() => window.removeEventListener('keydown', onKeyDown));
 
     function exit(force = false) {
       if (props.level === 0 && !force) {
         state.displayIntro = true;
       } else {
-        context.emit("exit");
+        context.emit('exit');
       }
     }
 

@@ -55,23 +55,23 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, onMounted, reactive } from "vue";
-import { GameScreen } from "@/utils/screens";
-import BackgroundLandscape from "@/components/ui/background-landscape.vue";
-import ScreenStart from "@/components/screens/screen-start.vue";
-import ScreenTorture from "@/components/screens/screen-torture.vue";
-import ScreenHub from "@/components/screens/screen-hub.vue";
-import ScreenCell from "@/components/screens/screen-cell.vue";
-import ScreenQuestions from "@/components/screens/screen-questions.vue";
-import ScreenBeforeEnd from "@/components/screens/screen-before-end.vue";
-import ScreenEnd from "@/components/screens/screen-end.vue";
-import ScreenCredits from "@/components/screens/screen-credits.vue";
-import screenLoading from "./components/screens/screen-loading.vue";
+import { computed, defineComponent, onMounted, reactive } from 'vue';
+import { GameScreen } from '@/utils/screens';
+import BackgroundLandscape from '@/components/ui/background-landscape.vue';
+import ScreenStart from '@/components/screens/screen-start.vue';
+import ScreenTorture from '@/components/screens/screen-torture.vue';
+import ScreenHub from '@/components/screens/screen-hub.vue';
+import ScreenCell from '@/components/screens/screen-cell.vue';
+import ScreenQuestions from '@/components/screens/screen-questions.vue';
+import ScreenBeforeEnd from '@/components/screens/screen-before-end.vue';
+import ScreenEnd from '@/components/screens/screen-end.vue';
+import ScreenCredits from '@/components/screens/screen-credits.vue';
+import screenLoading from './components/screens/screen-loading.vue';
 
-import "@/styles/fonts.css";
-import "@/styles/screen.css";
-import { CellConfig, cellsConfigs } from "./utils/cells";
-import { loadSounds } from "./utils/audio-manager";
+import '@/styles/fonts.css';
+import '@/styles/screen.css';
+import { CellConfig, cellsConfigs } from './utils/cells';
+import { loadSounds } from './utils/audio-manager';
 
 interface GameState {
   screen: GameScreen;
@@ -85,7 +85,7 @@ interface GameState {
 const NB_LEVELS = 5;
 
 export default defineComponent({
-  name: "App",
+  name: 'App',
   setup() {
     const state: GameState = reactive({
       screen: GameScreen.Loading,
@@ -93,12 +93,12 @@ export default defineComponent({
       lastLevel: computed(() => state.level > NB_LEVELS),
       cells: [],
       selectedCell: undefined,
-      questions: ["deserve", "eternity", "tortures", "pretty", "who"],
+      questions: ['deserve', 'eternity', 'tortures', 'pretty', 'who'],
     });
 
     const transition = reactive({
-      name: "fade",
-      mode: "in-out",
+      name: 'fade',
+      mode: 'in-out',
     });
 
     onMounted(async () => {
@@ -107,11 +107,11 @@ export default defineComponent({
     });
 
     const onBegin = () => {
-      transition.mode = "in-out";
+      transition.mode = 'in-out';
       state.screen = GameScreen.Torture;
     };
     const onExitTorture = () => {
-      transition.mode = "out-in";
+      transition.mode = 'out-in';
 
       if (state.level < NB_LEVELS) {
         state.cells = cellsConfigs
@@ -121,7 +121,7 @@ export default defineComponent({
       } else if (state.level === NB_LEVELS) {
         state.screen = GameScreen.BeforeEnd;
       } else {
-        transition.mode = "in-out";
+        transition.mode = 'in-out';
         state.screen = GameScreen.Credits;
       }
     };
@@ -145,17 +145,16 @@ export default defineComponent({
       state.screen = GameScreen.Torture;
     };
     const onEnterEnd = () => {
-      transition.mode = "out-in";
+      transition.mode = 'out-in';
       state.screen = GameScreen.End;
     };
     const onRefuseEnd = () => {
       state.level++;
-      transition.mode = "in-out";
+      transition.mode = 'in-out';
       state.screen = GameScreen.Torture;
     };
     const onEnd = () => {
-      console.log("Waaaaa!?");
-      transition.mode = "in-out";
+      transition.mode = 'in-out';
       state.screen = GameScreen.Credits;
     };
 

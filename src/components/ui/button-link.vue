@@ -28,22 +28,22 @@ export default defineComponent({
   text-decoration: none;
   padding: 0.6em 1.3em;
   border-radius: 2em;
-  background: #2a632f;
+  background: #075a53;
   color: white;
 }
 
 .button-link:focus,
 .button-link:hover {
   outline: none;
-  background: #47724b;
+  background: #118b81;
   box-shadow: rgba(255, 255, 255, 0.6) 0 0 0.8em;
 }
 
 .button-link.danger {
-  background: #97371a;
+  background: #a31c0a;
 }
 .button-link.danger:focus,
 .button-link.danger:hover {
-  background: #bb6950;
+  background: #b12929;
 }
 </style>

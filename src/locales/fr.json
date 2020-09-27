@@ -2,7 +2,7 @@
   "loading": "Chargement des données…",
   "start": {
     "title": "Vignette des Enfers",
-    "begin": "Commencer une nouvelle partie"
+    "begin": "Commencer"
   },
   "torture": {
     "instruction": "Recopiez le code ci-dessous",
