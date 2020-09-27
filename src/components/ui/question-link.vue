@@ -3,10 +3,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from "vue";
 export default defineComponent({
-  name: 'question-link',
-  emits: ['click'],
+  name: "question-link",
+  emits: ["click"],
 });
 </script>
 
@@ -14,6 +14,7 @@ export default defineComponent({
 .question-link {
   text-decoration: none;
   color: black;
+  text-shadow: white 0.1em 0.1em 0.2em;
   font-weight: bold;
   font-style: italic;
 }

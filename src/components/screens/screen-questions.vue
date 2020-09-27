@@ -76,6 +76,12 @@ export default defineComponent({
   list-style: none;
   font-style: italic;
   font-weight: bold;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 1rem;
+  border-radius: 20px;
+}
+.list > * + * {
+  margin-top: 0.7rem;
 }
 
 .answering {
