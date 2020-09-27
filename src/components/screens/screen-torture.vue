@@ -53,7 +53,7 @@ import ButtonLink from "@/components/ui/button-link.vue";
 import UiParagraph from "@/components/ui/ui-paragraph.vue";
 import UiScreen from "@/components/ui/ui-screen.vue";
 
-const REQUIRED_SCORE = 4;
+const REQUIRED_SCORE = 0;
 
 interface TortureState {
   locked: boolean;

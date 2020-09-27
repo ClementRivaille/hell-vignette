@@ -1,7 +1,7 @@
 <template>
-  <ui-screen color="#5a0101">
+  <ui-screen color="#623232">
     <div class="end">
-      <img class="window" src="@/assets/images/car.png" />
+      <img class="window" src="@/assets/images/end.png" />
       <ui-dialog
         class="end-dialogs"
         :dialogs="endDialogs"

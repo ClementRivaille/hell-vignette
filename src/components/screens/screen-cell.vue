@@ -2,7 +2,9 @@
   <ui-screen :color="cell.color">
     <div class="cell">
       <div class="description">
-        <ui-paragraph :color="cell.black ? TextColor.Black : TextColor.White">
+        <ui-paragraph
+          :color="cell.blackText ? TextColor.black : TextColor.white"
+        >
           <p v-for="i in cell.nbParagraphs" :key="`${cell.id}.${i}`">
             {{ $t(`cells.${cell.id}.description.${i - 1}`) }}
           </p>

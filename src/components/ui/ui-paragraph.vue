@@ -5,15 +5,15 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from "vue";
 
 export enum TextColor {
-  white = 'white',
-  black = 'black',
+  white = "white",
+  black = "black",
 }
 
 export default defineComponent({
-  name: 'ui-paragraph',
+  name: "ui-paragraph",
   props: {
     color: {
       type: String as () => TextColor,
