@@ -13,10 +13,14 @@
           </div>
 
           <div class="help">
-            <div class="exit" v-if="state.score >= 0">
-              <button-link @click="exit">{{
-                $t(`torture.exit.${level}`)
-              }}</button-link>
+            <div class="exit">
+              <button-link
+                @click="exit"
+                v-if="last || state.free"
+                :danger="last"
+              >
+                {{ last ? $t(`torture.ready`) : $t(`torture.exit.${level}`) }}
+              </button-link>
             </div>
           </div>
 
@@ -38,10 +42,29 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, onUnmounted, reactive } from "vue";
+import {
+  computed,
+  defineComponent,
+  onMounted,
+  onUnmounted,
+  reactive,
+} from "vue";
 import ButtonLink from "@/components/ui/button-link.vue";
 import UiParagraph from "@/components/ui/ui-paragraph.vue";
 import UiScreen from "@/components/ui/ui-screen.vue";
+
+const REQUIRED_SCORE = 4;
+
+interface TortureState {
+  locked: boolean;
+  displayError: boolean;
+  prompt: string;
+  typed: string;
+  cursor: number;
+  score: number;
+  free: boolean;
+  displayIntro: boolean;
+}
 
 const characters = "abcdefghijklmnopqrstuvwxyz0123456789";
 export default defineComponent({
@@ -51,17 +74,21 @@ export default defineComponent({
       type: Number,
       required: true,
     },
+    last: {
+      type: Boolean,
+    },
   },
   emit: ["exit"],
   components: { ButtonLink, UiParagraph, UiScreen },
   setup(props, context) {
-    const state = reactive({
+    const state: TortureState = reactive({
       locked: false,
       displayError: false,
       prompt: "",
       typed: "",
       cursor: 0,
       score: 0,
+      free: computed(() => state.score >= REQUIRED_SCORE),
       displayIntro: false,
     });
 
@@ -98,7 +125,7 @@ export default defineComponent({
     };
 
     const onError = () => {
-      state.score = Math.max(state.score - 1, -3);
+      state.score = Math.max(state.score - 1, 0);
 
       state.locked = true;
       state.displayError = true;

@@ -10,6 +10,7 @@
         <screen-torture
           v-else-if="state.screen === GameScreen.Torture"
           :level="state.level"
+          :last="state.lastLevel"
           @exit="onExitTorture"
         />
 
@@ -52,24 +53,25 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive } from 'vue';
-import { GameScreen } from '@/utils/screens';
-import BackgroundLandscape from '@/components/ui/background-landscape.vue';
-import ScreenStart from '@/components/screens/screen-start.vue';
-import ScreenTorture from '@/components/screens/screen-torture.vue';
-import ScreenHub from '@/components/screens/screen-hub.vue';
-import ScreenCell from '@/components/screens/screen-cell.vue';
-import ScreenQuestions from '@/components/screens/screen-questions.vue';
-import ScreenBeforeEnd from '@/components/screens/screen-before-end.vue';
-import ScreenEnd from '@/components/screens/screen-end.vue';
+import { computed, defineComponent, reactive } from "vue";
+import { GameScreen } from "@/utils/screens";
+import BackgroundLandscape from "@/components/ui/background-landscape.vue";
+import ScreenStart from "@/components/screens/screen-start.vue";
+import ScreenTorture from "@/components/screens/screen-torture.vue";
+import ScreenHub from "@/components/screens/screen-hub.vue";
+import ScreenCell from "@/components/screens/screen-cell.vue";
+import ScreenQuestions from "@/components/screens/screen-questions.vue";
+import ScreenBeforeEnd from "@/components/screens/screen-before-end.vue";
+import ScreenEnd from "@/components/screens/screen-end.vue";
 
-import '@/styles/fonts.css';
-import '@/styles/screen.css';
-import { CellConfig, cellsConfigs } from './utils/cells';
+import "@/styles/fonts.css";
+import "@/styles/screen.css";
+import { CellConfig, cellsConfigs } from "./utils/cells";
 
 interface GameState {
   screen: GameScreen;
   level: number;
+  lastLevel: boolean;
   cells: string[];
   selectedCell?: CellConfig;
   questions: string[];
@@ -78,40 +80,38 @@ interface GameState {
 const NB_LEVELS = 5;
 
 export default defineComponent({
-  name: 'App',
+  name: "App",
   setup() {
     const state: GameState = reactive({
       screen: GameScreen.Start,
       level: 0,
+      lastLevel: computed(() => state.level > NB_LEVELS),
       cells: [],
       selectedCell: undefined,
-      questions: ['deserve', 'eternity', 'tortures', 'pretty', 'who'],
+      questions: ["deserve", "eternity", "tortures", "pretty", "who"],
     });
 
     const transition = reactive({
-      name: 'fade',
-      mode: 'out-in',
+      name: "fade",
+      mode: "out-in",
     });
 
     const onBegin = () => {
-      transition.mode = 'in-out';
+      transition.mode = "in-out";
       state.screen = GameScreen.Torture;
     };
     const onExitTorture = () => {
-      transition.mode = 'out-in';
+      transition.mode = "out-in";
 
       if (state.level < NB_LEVELS) {
-        state.cells = [
-          cellsConfigs[0].id,
-          // cellsConfigs[2].id,
-          // cellsConfigs[3].id,
-          // cellsConfigs[1].id,
-        ];
+        state.cells = cellsConfigs
+          .filter((config) => config.level === state.level)
+          .map((config) => config.id);
         state.screen = GameScreen.Hub;
       } else if (state.level === NB_LEVELS) {
         state.screen = GameScreen.BeforeEnd;
       } else {
-        transition.mode = 'in-out';
+        transition.mode = "in-out";
         state.screen = GameScreen.Credits;
       }
     };
@@ -135,17 +135,17 @@ export default defineComponent({
       state.screen = GameScreen.Torture;
     };
     const onEnterEnd = () => {
-      transition.mode = 'out-in';
+      transition.mode = "out-in";
       state.screen = GameScreen.End;
     };
     const onRefuseEnd = () => {
       state.level++;
-      transition.mode = 'in-out';
+      transition.mode = "in-out";
       state.screen = GameScreen.Torture;
     };
     const onEnd = () => {
-      console.log('Waaaaa!?');
-      transition.mode = 'in-out';
+      console.log("Waaaaa!?");
+      transition.mode = "in-out";
       state.screen = GameScreen.Credits;
     };
 
