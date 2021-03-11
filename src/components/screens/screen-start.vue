@@ -2,27 +2,29 @@
   <ui-screen color="#2e2e2e">
     <div class="start">
       <div>
-        <h1>{{ $t("start.title") }}</h1>
+        <h1>{{ $t('start.title') }}</h1>
         <div class="menu">
-          <a href="#" @click.prevent="begin">{{ $t("start.begin") }}</a>
+          <a href="#" @click.prevent="begin">{{ $t('start.begin') }}</a>
         </div>
       </div>
+      <hv-options />
     </div>
   </ui-screen>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import UiScreen from "@/components/ui/ui-screen.vue";
+import { defineComponent } from 'vue';
+import UiScreen from '@/components/ui/ui-screen.vue';
+import HvOptions from '../hv-options.vue';
 
 export default defineComponent({
-  name: "screen-start",
-  components: { UiScreen },
-  emits: ["begin"],
+  name: 'screen-start',
+  components: { UiScreen, HvOptions },
+  emits: ['begin'],
   setup(_props, context) {
     return {
       begin() {
-        context.emit("begin");
+        context.emit('begin');
       },
     };
   },

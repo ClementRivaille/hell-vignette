@@ -156,7 +156,7 @@
     "glass": {
       "title": "D-9404",
       "description": [
-        "I hope you don't have vertigo! This skycraper rises up to several hundreds of stories. Patients work here as windows cleaner. Inside, they see glimpses of close relatives from the time where they were still alive. They watch them continue their lives without them, and note that they're easily replaced, or even forgotten. Their spouses remarry, their friends are partying, their parents are at peace and their children found new rolemodels.",
+        "I hope you don't have vertigo! This skycraper rises up to several hundreds of stories. Patients work here as windows cleaner. Inside, they see glimpses of close relatives from the time where they were still alive. They watch them continue their lives without them, and see how easily they've been replaced, or even forgotten. Their spouses remarry, their friends are partying, their parents are at peace and their children found new rolemodels.",
         "They can scream or thump on the glass as much as they can, they won't be heard. Patients convicted her had a tendancy to see themselves as the center of the world. It makes them mad to to see that the universe is doing perfectly fine without them."
       ]
     },
@@ -244,5 +244,10 @@
     "author": "Written and realised by Itooh",
     "date": "September 2020",
     "goodbye": "Goodbye, friend."
+  },
+  "options": {
+    "language": "Language:",
+    "fr": "fr",
+    "en": "en"
   }
 }

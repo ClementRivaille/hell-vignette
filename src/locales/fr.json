@@ -244,5 +244,10 @@
     "author": "Écrit et réalisé par Itooh",
     "date": "Septembre 2020",
     "goodbye": "Au revoir, l'ami."
+  },
+  "options": {
+    "language": "Langue :",
+    "fr": "fr",
+    "en": "en"
   }
 }
