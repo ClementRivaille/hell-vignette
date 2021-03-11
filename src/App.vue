@@ -71,7 +71,11 @@ import screenLoading from './components/screens/screen-loading.vue';
 import '@/styles/fonts.css';
 import '@/styles/screen.css';
 import { CellConfig, cellsConfigs } from './utils/cells';
-import { loadSounds } from './utils/audio-manager';
+import {
+  activateMusic,
+  deactivateMusic,
+  loadSounds,
+} from './utils/audio-manager';
 
 interface GameState {
   screen: GameScreen;
@@ -118,8 +122,10 @@ export default defineComponent({
           .filter((config) => config.level === state.level)
           .map((config) => config.id);
         state.screen = GameScreen.Hub;
+        activateMusic();
       } else if (state.level === NB_LEVELS) {
         state.screen = GameScreen.BeforeEnd;
+        activateMusic();
       } else {
         transition.mode = 'in-out';
         state.screen = GameScreen.Credits;
@@ -143,10 +149,12 @@ export default defineComponent({
       state.questions = state.questions.filter((q) => q !== question);
       state.level++;
       state.screen = GameScreen.Torture;
+      deactivateMusic();
     };
     const onEnterEnd = () => {
       transition.mode = 'out-in';
       state.screen = GameScreen.End;
+      deactivateMusic();
     };
     const onRefuseEnd = () => {
       state.level++;
