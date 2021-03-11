@@ -23,7 +23,7 @@
     "next": "Quelle cellule veux-tu visiter ensuite ?",
     "text-0": "Plus trop habitué à la lumière du jour, on dirait ? D'ici, on a accès aux cellules de tortures. Il y en a plus que tu ne pourrais en visiter en toute une vie ! Chaque torture est personnalisée selon les sujets. Je propose qu'on ne s'attarde qu'à celles qui sont à proximité. Vas-y, choisis la cellule qui t'intéresse en premier.",
     "text-1": "Tu as l'air encore en forme ! La souffrance ne t'as pas encore rendu trop gaga ? Prenons un peu l'air. Choisis une cellule, et je te la présente.",
-    "text-2": "Je vois que tu tiens le coup, c'est bien. Malheureusement j'ai peur que le pire est à venir encore pour toi. Le but de ton supplice t'échappes peut-être, mais il te changera crois moi. En attendant, faisons un peu de tourisme ! Où veux-tu aller ?",
+    "text-2": "Je vois que tu tiens le coup, c'est bien. Tu n'as rien à envier à Sisyphe ! Malheureusement j'ai peur que le pire est à venir encore pour toi. Le but de ton supplice t'échappes peut-être, mais il te changera crois moi. En attendant, faisons un peu de tourisme ! Où veux-tu aller ?",
     "text-3": "À quand remonte ma dernière visite ? Deux semaines ? Plusieurs mois ? Des années !? On perd vite la notion du temps ici… Mais ce n'est pas plus mal ! Vas-y, dis moi ce que tu souhaites voir.",
     "text-4": "Tu n'es plus le même condamné que j'avais rencontré la première fois ! La torture t'as… Je ne dirais pas « mûri » nécessairement, ni forcément « détruit ». Elle a eu un impact, positif ou non. C'est l'essentiel. Mais j'espère que tu es toujours d'attaque pour nos petites sorties !"
   },
@@ -164,7 +164,7 @@
       "title": "Y-6916",
       "description": [
         "Quoi qu'il arrive, ne les regarde pas. Si tu croises leur regard, tu ne pourras plus t'en défaire. C'est ce qu'ils attendent de toi. Ils t'observent, en ce moment. Comme ils l'ont fait durant toute ta vie, sans que tu t'en apercoives. Dans cette cellule, nous placons les sujets juste à côté d'eux. Ils peuvent entendre leur respiration, sentir leur griffe les frôler… Et percevoir le poids de leur regard, toujours présent.",
-        "Certains sujets arrivent à traverser. Ils ne sont pas libérés pour autant. Ils continuent leur périple aux Enfers, en se sachant épiés. Mais ils ne regardent plus jamais derrière eux, même après une réincarnation, et cultivent une peur des miroirs qui échappe à leur compréhension. Quant à ceux qui se perdent ici… Maintes fois tu as croisé leurs reflets, ils ton't appelé à l'aide, mais te ne les as jamais remarqué."
+        "Certains sujets arrivent à traverser. Ils ne sont pas libérés pour autant. Ils continuent leur périple aux Enfers, en se sachant épiés. Mais ils ne regardent plus jamais derrière eux, et cultivent une peur des miroirs qui échappe à leur compréhension. Quant à ceux qui se perdent ici… Maintes fois tu as croisé leurs reflets, ils ton't appelé à l'aide, mais te ne les as jamais remarqué."
       ]
     },
     "ruins": {
@@ -193,7 +193,7 @@
     "back": "Au travail !",
     "deserve": {
       "title": "Qu'ai-je fait pour mériter d'aller en Enfer ?",
-      "answer": "Ce n'est pas une question de mériter les Enfers ou non. Nous sommes bien au-delà des concepts de bien ou de mal. Nous ne décidons pas nous même de qui nous accueillons. Les gens qui viennent ici sont là pour souffrir, c'est tout. Peut-être parce qu'ils en ont besoin. Peut-être parce qu'ils l'ont voulu. Ou que quelqu'un d'autre l'a souhaité ? La souffrance permet aux âmes de changer. C'est par là qu'elles se débarrasent de leurs impuretés et leurs blessures pour devenir quelqu'un d'autre. Toutes les âmes n'atterrissent pas ici, c'est vrai. Peut-être d'autres vont au Paradis… Sont-elles plus chanceuses ? Pose-toi la question : si l'on te présentait deux opportunités, la première celle de vivre ans un contentement permanent sans jamais évoluer, la deuxième celle de passer par une expérience si éprouvante qu'elle te changera complètement, préfèrerais-tu forcément la première ?"
+      "answer": "Ce n'est pas une question de mériter les Enfers ou non. Nous sommes bien au-delà des concepts de bien ou de mal. Nous ne décidons pas nous même de qui nous accueillons. Les gens qui viennent ici sont là pour souffrir, c'est tout. Peut-être parce qu'ils en ont besoin. Peut-être parce qu'ils l'ont voulu. Ou que quelqu'un d'autre l'a souhaité ? La souffrance permet aux âmes de changer. C'est par là qu'elles se débarrasent de leurs impuretés et leurs blessures pour devenir quelqu'un d'autre. Toutes les âmes n'atterrissent pas ici, c'est vrai. Peut-être d'autres vont au Paradis… Sont-elles plus chanceuses ? Pose-toi la question : si l'on te présentait deux opportunités, la première celle de vivre dans un contentement permanent sans jamais évoluer, la deuxième celle de passer par une expérience si éprouvante qu'elle te changera complètement, préfèrerais-tu forcément la première ?"
     },
     "eternity": {
       "title": "Vais-je rester ici pour l'éternité ?",
