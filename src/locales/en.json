@@ -21,8 +21,8 @@
       "Take your time, it's only a moment to pass.",
       "The more you fail, the longer this will last. Keep focused.",
       "Each failure makes you go back. If you remain conscientious, you'll make it.",
-      "Come on, I know you can do it! Don't despair.",
-      "If I was you, I'd write down the code somewhere instead of memorizing it.",
+      "Hang on, I know you can do it! Don't despair.",
+      "If I were you, I'd write down the code somewhere instead of memorizing it.",
       "You know, there's nothing forbidding you to copy the code. But you must keep this a secret, okay? "
     ],
     "wait": {
@@ -61,22 +61,22 @@
     "carCritic": {
       "title": "G-8748",
       "description": [
-        "The patient here is stuck in a car next to a driver who never shut up. This driver might appear friendly, only wanting to chat… But actually they will relentlessly criticize everything that you like, and explain to you why they hate it, until you become convinced. Musics that transport you? They'll demonstrate how much they are repetitive and obnoxious. A movie that has always had a special spot in your heart? They'll list all its cliches until you sincerely admit that it has nothing special.",
+        "The patient here is stuck in a car next to a driver who never shut up. This driver might appear friendly. They just want a nice chat, right? What they actually do, is that they will relentlessly criticize everything that you like, and explain to you why they hate it, until you become convinced. Musics that transport you? They'll demonstrate how much they are repetitive and obnoxious. A movie that has always had a special spot in your heart? They'll list all its cliches until you sincerely admit that it has nothing special.",
         "The road only ends once you've lost taste for everything. When the smallest bit of joy from your past existence just appears to you as a profound waste of time. You get out of there emptied. Unable to feel any emotion, except for cynism."
       ]
     },
     "blues": {
       "title": "Z-1984",
       "description": [
-        "This torture is painful even for me! The convicts are forced to play a bad blues. The boring kind of ones, that goes on forever (litterally), and drowns you into pure boredom. But each one of the inmates must perform a solo, one by one. You see the sound control at the other end of the room? They regularly signal them to continue for another verse.",
-        "Of course, the worse is that none of those players is actually a good musician. But you've surely noticed already. Let's not stay here for too long, alright?"
+        "This torture is painful even for me! The convicts are forced to play a bad blues. The boring kind of ones, that goes on forever (litterally), and drowns you into pure boredom. But each one of the inmates must perform a solo, one by one. You see the sound control at the other end of the room? Someone there regularly signal them to continue for another verse.",
+        "Of course, the worse is that none of those players is actually a good musician. But you've surely noticed already. Let's not stay here for too long, shall we?"
       ]
     },
     "tortureInstruments": {
       "title": "E-9098",
       "description": [
-        "This is were we store our ancient torutre instruments. This table is for tearing members apart. This gadget pierces the eyes and goes up to the back of the skull. And this funny pendulum here hooks on the jaw first and then… Well, whatever.",
-        "Long ago, they were still in use. Now we just let them on self-service. They're not a lot, but some of our patients enjoy applying those on themselves! Go figure, maybe pure pain helps them forgetting theit condition, or medidating…",
+        "This is where we store our old torutre instruments. This table is for tearing members apart. This gadget pierces the eyes and goes up to the back of the skull. And this funny pendulum here hooks on the jaw first and then… Well, whatever.",
+        "Long ago, they were still in use. Now we just let them on self-service. Some of our patients, although they're not a lot, enjoy applying those on themselves! Go figure, maybe pure pain helps them forgetting their condition, or medidating…",
         "Although I must admit I haven't seen anyone yet trying this jaw thingy by their own."
       ]
     },
@@ -84,13 +84,13 @@
       "title": "B-1576",
       "description": [
         "I come here sometime to get in a good mood! The patient is on a date with their beloved one. But not any kind of date: a jogging. It's a nice afternoon, there's not a single cloud troubling the blue sky, birds sing along the gentle sounds of the city… And it has been years those two are running without interruption, under this suffocating heat!",
-        "Of course the patient is terribly exhausted, but never enough to dare stopping or slowing down. Their date, on the other hand, never show any sign of weakness, and will even subtly tease them by endlessly chatting about sport advices. All of them useless, naturally."
+        "Of course the patient is terribly exhausted, but never enough to dare stopping or slowing down. Their date, on the other hand, never shows any sign of weakness, and will even subtly tease them by endlessly chatting about sport advices. All of them useless, naturally."
       ]
     },
     "puppies": {
       "title": "W-6842",
       "description": [
-        "Look at those babies! Aren't they cute? They come in all fashions: humans, puppies, kitties, bunnies… You can't be insensitive to that! But don't trust their innocent look, all of them are demons in disguise. We ask the patients to take care of the infants, and those will do everything in their power to make the task atrocious and painful! Believe me, they are expert in nastiness.",
+        "Look at those babies! Aren't they cute? They come in all fashions: humans, puppies, kitties, bunnies… You can't be insensitive to that! But don't trust their innocent look, all of them are demons in disguise. We ask the patients to take care of the infants, and those ones will do everything in their power to make the task atrocious and painful! Believe me, they are expert in nastiness.",
         "To make the stress even more unsustainable, patients are under suveillance. At any sign of fatigue, anger, or even despair, we lecture them! In a strange way, none of them want to be seen as an irresponsible monster. Or at least, not more than they already are."
       ]
     },
@@ -104,7 +104,7 @@
     "insomnia": {
       "title": "L-0648",
       "description": [
-        "This torture is horrifying. The patient is kept in and endless night of insomnia. Each time they try to sleep, we play a mosquito buzzing close to their ear. The patient will therefore turn on the light, throughly search every corners, without finding anything. Repeating this routine hundred of times leads anyone to madness!",
+        "This torture is horrifying. The patient is kept in and endless night of insomnia. Each time they try to sleep, we play a mosquito buzzing close to their ear. The patient will therefore turn on the light, thoroughly search every corners, without finding anything. Repeating this routine hundred of times leads anyone to madness!",
         "Eventually the detainee end up knowing their room by heart. They've inspected every walls, have flipped every furnitures… They hang on the hope that by falling asleep, they will escape. If only they could realize that they're already gone!"
       ]
     },
@@ -112,13 +112,13 @@
       "title": "C-4583",
       "description": [
         "Sit down, I promise you'll enjoy this! Here, we watch again and again the painful moments of the patient's past life. That's them, at the center of the couch, circled by hilarious demons. Those know the movie by heart, but they never get tired of it. Bad decisions, failures, emarassing situations, drama, crimes… Everything is included, it's a blast!",
-        "While we're here, you can help yourself to the pizza."
+        "While we're here, help yourself to the pizza."
       ]
     },
     "machine": {
       "title": "U-9201",
       "description": [
-        "Here is the Machine! Breathtaking, isn't it? What does it do? Absolutely no idea! It needs thousand of workers to keep it active, but nobody knows what it makes. And certainly not the managers! They're the actual patients. They have no idea what they're doing here, but we gave them tight deadlines and an obligation to show results. So they'e running in every directions, in a permanent crunch, yelling orders, arguing with each other, trying to understand what's going on, while keeping pretending that they're experts… You know what's the funniest? I bet most of them are anti-union!"
+        "Here is the Machine! Breathtaking, isn't it? What it does? Absolutely no idea! It needs thousand of workers to keep it active, but nobody knows what it makes. And certainly not the managers! They're the actual patients. They have no idea what they're doing here, but we gave them tight deadlines and an imperative to show results. So they're running in every directions, in a permanent crunch, yelling orders, arguing with each other, trying to understand what's going on, while keeping pretending that they're experts… You know what's the funniest? I bet most of them are anti-union!"
       ]
     },
     "skeleton": {
@@ -141,16 +141,16 @@
     "gala": {
       "title": "E-6480",
       "description": [
-        "Have a drink, please! That champagne is delicious. And it's very frown upon not to drink anything here. In this gala evening, we find the most sophisticated guests there is. Lords, duchess, ministers, royalties, billionaire CEO, stars… Only uptight people, very finicky when it comes to manners! In fact they are not here to have fun. A reception like this one is for them a competition. It's a battlefield where one must always prove their social status, crush (with dignity) other guests of inferior ranks, if one hope to reach the top. There is no room for entertainment, the challenge is to keep the apparences of joviality and respect, while remaining wary and intransigent. All of this while enjoying the most refined dishes and drinks that humanity has known!",
-        "Where is the torture in all that? Here is the twist: there is no restroom here."
+        "Have a drink, please! That champagne is delicious. And it's very frown upon not to drink anything here. In this gala evening, we find the most sophisticated guests there is. Lords, duchess, ministers, royalties, billionaire CEOs, stars… Only uptight people, very finicky when it comes to manners! In fact they are not here to have fun. A reception like this one is a competition for them. It's a battlefield where one must always prove their social status, crushing (with dignity) other guests of inferior ranks, if one hope to reach the top. There is no room for entertainment, the challenge is to keep the apparences of joviality and respect, while remaining wary and intransigent. All of this while enjoying the most refined dishes and drinks that humanity has known!",
+        "Where is the torture in all that? Here is the catch: there is no restroom here."
       ]
     },
     "memories": {
       "title": "L-3478",
       "description": [
-        "This sea is so calm that you can see the stars and the moon's reflections in it! Sometimes, some waves disturb the surface when patients throw their suitcases in it. Look, they come from behind this hill, and walk to the end of this dock to swing luggage in the water.",
+        "This sea is so calm that you spot the stars and the moon's reflections in it! Sometimes, some waves disturb the surface when patients throw their suitcases in it. Look, they come from behind this hill, and walk to the end of this dock to swing luggage in the water.",
         "What they're throwing exactly, it's their memories. Moments, faces, places… Everything that was part of their life. We take that out from them, so that they become fresh copies.",
-        "You'll probably say, we could just erase all their memory at once. That's true. But this process is more interesting. They need hundreds of round trips to empty all their mind. Removing memories one by one. Largely enough time for them to fully contemplate what they are losing. If they were pragmatic, they would take as much memories as possible on each trip, and would hurry to throw everything so that they would quickly put an end to their suffering. But what do you want, they'd rather desperately hold on to anything they can."
+        "You'll probably say, we could just erase their memory all at once. That's true. But this process is more interesting. They need hundreds of round trips to empty all their mind. Removing memories one by one. Largely enough time for them to fully contemplate what they are losing. If they were pragmatic, they would take as much memories as possible on each trip, and would hurry to throw everything so that they would quickly put an end to their sorrow. But what do you want, they'd rather desperately hold on to anything they can."
       ]
     },
     "jumpscare": {
@@ -164,7 +164,7 @@
       "title": "M-5594",
       "description": [
         "Admire the artworks of this museum! Quite exceptional, aren't they? We have here all the greatest artists that ever existed. And also those that never existed, and even some in between. Patients wander here while contemplating paintings and statues. Occasionally, they find someting familiar. The portrait of someone they've known, a place where they used to live, or even a representation of themselves! But when they read the description to learn more about the art, they discover that it's nothing more than, well, art. Made by someone they don't know, from a far away land, at a time they've never known. Even inspirations and intentions cannot be linked to anything!",
-        "The more time they spend here, the more they see these kind of works, and the more doubt settles in them. Could what they thought was a memory actually be fictious? Is this painting familiar because they've lived it, or because they enjoy the other creation from that same artist? Could they just be the product of somebody else's imagination? By mixing up true and false, they end up not knowing the difference. We can then collect them, as consciousness devoid of any form of ego. But featuring a great artistic culture!"
+        "The more time they spend here, the more they see these kind of works, and the more doubt settles in them. Could what they thought was a memory actually be fictious? Is this painting familiar because they've lived it, or because they enjoy the other creations from that same artist? Could they just be the product of somebody else's imagination? By mixing up true and false, they end up not knowing the difference. We can then collect them, as consciousness devoid of any form of ego. But featuring a great artistic culture!"
       ]
     },
     "island": {
@@ -178,7 +178,7 @@
     "glass": {
       "title": "D-9404",
       "description": [
-        "I hope you don't have vertigo! This skycraper rises up to several hundreds of stories. Patients work here as windows cleaner. Inside, they see glimpses of close relatives from the time where they were still alive. They watch them continue their lives without them, and see how easily they've been replaced, or even forgotten. Their spouses remarry, their friends are partying, their parents are at peace and their children found new rolemodels.",
+        "I hope you don't have vertigo! This skycraper rises up to several hundreds of stories. Patients work here as windows cleaners. Inside, they see glimpses of close relatives from the time where they were still alive. They watch them continue their lives without them, and see how easily they've been replaced, or even forgotten. Their spouses remarry, their friends are partying, their parents are at peace and their children found new rolemodels.",
         "They can scream or thump on the glass as much as they can, they won't be heard. Patients convicted her had a tendancy to see themselves as the center of the world. It makes them mad to to see that the universe is doing perfectly fine without them."
       ]
     },
@@ -186,20 +186,20 @@
       "title": "Y-6916",
       "description": [
         "Whatever happens, don't look at them. If you make eye contact, you won't be able to escape. It's what they're expecting from you. They're looking at you, right now. As they always have been during your whole life, without you noticed. In this cell, we put subjects right next to them. They can hear their breathing, feel their claw almost scratch them… And feeling the wheight of their gaze, always present.",
-        "Some patients manage to pass through. But that doesn't make them free. They continue their journey in Hells, knowing they are watched. But they never look behind them again, and start being afraid of mirrors without understanding why. As for those who get lost here… Many times you've seen their reflections, they called you for help, but you never noticed them."
+        "Some patients manage to pass through. But that doesn't make them free. They resume their journey in Hells, knowing that they are observed. But they never look behind them again, and start being afraid of mirrors without understanding why. As for those who get lost here… Many times you've seen their reflections, they called you for help, but you never noticed them."
       ]
     },
     "ruins": {
       "title": "J-0905",
       "description": [
-        "It is difficult to accept that everything comes to an end eventually. The largets cities crumble, empires fall down, continents sink… All that will remain of your civilization, you're looking at it here. Wreckages, ruins of buildings from which we can barely guess the look it once had, along with ash and invading vegetation.",
+        "It is difficult to accept that everything comes to an end eventually. The largest cities crumble, empires fall down, continents sink… All that will remain of your civilization, you're looking at it here. Wreckages, ruins of buildings from which we can barely guess the look it once had, along with ash and invading vegetation.",
         "We give patients the mission of digging up dead bodies and identifying them. Yeah, not the most appealing thing to watch. Of course, every bodies they find is one of their acquaintance. They're struck right in the heart! It's from then that they recognize their surroundings. This was a garden in which they used to play. And that were the offices where they worked! A long time ago, there used to be a grocery there, they used to visit it a lot. All those little things they thought they forgot resurface, irreversibly misshaped. Fragile pilars of their lives, no less ephemeral…"
       ]
     }
   },
   "question": {
     "intro": {
-      "0": "That's all I can show you for now. But before bringing you back to your cell, we can chat for a bit while. Is there any question on Hells you'd want to ask me?" ,
+      "0": "That's all I can show you for now. But before bringing you back to your cell, we can chat for a bit. Is there any question on Hells you'd want to ask me?" ,
       "1": "We arrive at the end of our trip. Before you go back to your cell, is there anything you want to ask?",
       "2": "That's all for today. If you want to, I can answer another one of your questions.",
       "3": "I've spent a quite nice time with you! Tell you what, just ask me anything, and I'll see what I can tell you.",
@@ -212,7 +212,7 @@
       "3": "Anyway, now you must carry on your sentence. Sorry buddy, there's no other way! But you're getting used to it, aren't you?",
       "4": "That's all I can tell you about that. Now, I let you go enjoy your torment. We'll meet again… when we'll meet again!"
     },
-    "back": "Au travail !",
+    "back": "Back to work!",
     "deserve": {
       "title": "What have I done to deserve to go to Hell?",
       "answer": "It's not about deserving Hells or not. We're way beyond concepts of good and evil. We don't even decide ourselves who we receive. People coming to us are here to suffer, that's all. Maybe because they need it. Maybe they want it. Or maybe somebody else whished for it? Suffering allows souls to change. That's how they get rid of their impurities and injuries to become someone else. Not all souls do land here, that's true. Maybe some go to Heaven… Are they luckier? Ask yourself: if you had two opportunities before you, one being to live in a permanent contentment without ever evolving, the other to go through an experience so trying that it will completely change you, would you necessarily prefer the first one?"
@@ -223,21 +223,21 @@
     },
     "tortures": {
       "title": "How do you pick tortures?",
-      "answer": "Our architects have a wild creativity when it comes to invent new tortures! They try their best to find torments that match their victims the best. Striking right in their fears, their desires, their traumas, their regrets… The most often, we look for inspiration in your dreams. Especially your nightmares. Actually we build some of those too! There's nothing better to reach the subconscious! It also allows us to propose Hells with wich you're already familiar. Anyone landing in Hells realizes that they've already been there long ago. They endure atrocious persecution, alright, but they feel at home."
+      "answer": "Our architects have a wild creativity when it comes to invent new tortures! They try their best to find torments that match their victims the best. Striking right in their fears, their desires, their traumas, their regrets… The most often, we look for inspiration in your dreams. Especially your nightmares. Actually we build some of those too! There's nothing better to reach the subconscious! It also allows us to offer Hells with wich you're already familiar. Anyone landing in Hells realizes that they've already been there long ago. They endure atrocious persecution, alright, but they feel at home."
     },
     "pretty": {
-      "title": "How come Hell looks so pretty?",
-      "answer": "Caves of fire, that doesn't attract anyone! People working here deserve to have a soothing environment, don't they? And the damned as well, after all. We torture them, alright, often cruelly, but that doesn't mean we can't do that with respect! Contrast is key. If there was only negative, it wouldn't mean anything. So we keep a bit of sweetness, of peace… So that you can fully enjoy the taste of despair."
+      "title": "How come Hell looks so nice?",
+      "answer": "Caves of fire? That doesn't attract anyone! People working here deserve to have a soothing environment, don't they? And the damned as well, after all. We torture them, alright, often cruelly, but that doesn't mean we can't do that with respect! Contrast is key. If there was only negative, it wouldn't mean anything. So we keep a bit of sweetness, of peace… So that you can fully enjoy the taste of despair."
     },
     "who": {
       "title": "Who are you?",
-      "answer": "Just an employee of Hells. Tasked with cells maintenance, and patients surveillance. And once in a while, I like to keep company to those. I think it's also part of my responsibilities! Before that, I used to be an inmate here. I served my sentence, and I grew fond of this place. It's not a particularly joyful setting, true, and I sometimes get remorse on the ethics of my job. But… I find meaning in it, in a way. A balance that satisfies me, and that I don't want to quit. Not yet, at least."
+      "answer": "Just an employee of Hells. Tasked with cells maintenance, and patients surveillance. And once in a while, I like to keep company to those. I think it's also part of my responsibilities! Before that, I used to be an inmate here. I served my sentence, and I grew fond of this place. It's not a particularly joyful setting, true, and I sometimes get remorse about the ethics of my job. But… I find meaning in it, in a way. A balance that satisfies me, and that I don't want to quit. Not yet, at least."
     }
   },
   "before-end": {
     "announce": "It's been a while you're serving your sentence here. You look pitiful, but you seem to have gained something from this. I think it's time for you… to move on.",
     "interrogation": "What do you mean?",
-    "leaving": "the time has come for you to leave Hells. They have nothing left to to give you. You don't have to endure your torment anymore, you can go.",
+    "leaving": "The time has come for you to leave Hells. They have nothing left to give you. You don't have to endure your torment anymore, you can go.",
     "time": "Well, there's no hurry, of course. Enjoy this view one the last time if you want to. Once you feel ready, we'll enter the exit Tower.",
     "ready": "Alright, let's go."
   },
@@ -247,7 +247,7 @@
     "car": "It's you yes. Inside the car, sunk deep below the surface already.",
     "waiting": " It's… What awaits you, once you get out of here.",
     "not-dead": "You mean I'm not dead!?",
-    "second": "Don't get ahead of yourself, you only have one second left at most. Water entirely filled your lungs, and your heart is just about to snap. You used your last forces trying to untie the security belt, to no avail. Death is definitely your fate here.",
+    "second": "Don't get ahead of yourself, you only have one second left at most. Water entirely filled your lungs, and your heart is just about to snap. You used your last forces trying to untie the security belt, to no avail. There is no way for you to escape death from here.",
     "rescue": "In your last moments, when you were feeling nothing but pain, your consciousness escaped. Survival instinct. We offered it shelter, as it should be. Hells are very unpleasant, but they grant respite to those who come in. Maybe not eternity, but at least a few centuries or millenials of suffering, to forget.",
     "no-deads": "But it's not the afterlife.",
     "really": "Wait, does that mean this is just my imagination?",
@@ -272,7 +272,7 @@
     "fr": "fr",
     "en": "en",
     "no-input": {
-      "label": "Disable keyboard inputs (accessibility):",
+      "label": "No keyboard inputs mode (accessibility):",
       "description": "Keyboard input sequences will be replaced with short waiting times"
     },
     "off": "Off",
