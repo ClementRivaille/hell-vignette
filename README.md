@@ -1,24 +1,7 @@
-# hell-vignette
+# Hells Vignette
 
-## Project setup
-```
-yarn install
-```
+Hells Vignette is a text-only narrative game made with Vue 3. It is about purging a sentence in afterlife while visiting other people's version of eternal punishment. It includes some interactive "torture" sequences requiring keyboard input, but is otherwise mostly a narrative game.
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+This game was originally made the Potat0s Game Jam of September 2020, which theme was “Hell”.
 
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+The Typewriter sound was made by [tjandrasounds](https://freesound.org/people/tjandrasounds/sounds/201590/)
