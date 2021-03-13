@@ -2,26 +2,27 @@
   <ui-screen color="black">
     <transition name="credits-fade">
       <div class="credits" v-if="display">
-        <h1>{{ $t("start.title") }}</h1>
+        <h1>{{ $t('start.title') }}</h1>
         <div class="infos">
-          <p class="author">{{ $t("credits.author") }}</p>
-          <p class="date">{{ $t("credits.date") }}</p>
+          <p class="author">{{ $t('credits.author') }}</p>
+          <p class="date">{{ $t('credits.date') }}</p>
         </div>
       </div>
       <ui-paragraph v-else>
-        {{ $t("credits.goodbye") }}
+        {{ $t('credits.goodbye') }}
       </ui-paragraph>
     </transition>
   </ui-screen>
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref } from "vue";
-import UiScreen from "@/components/ui/ui-screen.vue";
+import { defineComponent, onMounted, ref } from 'vue';
+import UiScreen from '@/components/ui/ui-screen.vue';
+import UiParagraph from '../ui/ui-paragraph.vue';
 
 export default defineComponent({
-  name: "screen-credits",
-  components: { UiScreen },
+  name: 'screen-credits',
+  components: { UiScreen, UiParagraph },
   setup() {
     const display = ref(false);
     onMounted(() => (display.value = true));

@@ -20,8 +20,8 @@
             <p>{{ $t(`question.${selected}.answer`) }}</p>
             <p>{{ $t(`question.exit.${level}`) }}</p>
           </ui-paragraph>
-          <button-link class="back-link" @click="$emit('leave', selected)">{{
-            $t("question.back")
+          <button-link class="back-link" @click="$emit('leave')">{{
+            $t('question.back')
           }}</button-link>
         </div>
       </transition>
@@ -30,14 +30,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from "vue";
-import UiParagraph from "@/components/ui/ui-paragraph.vue";
-import ButtonLink from "@/components/ui/button-link.vue";
-import QuestionLink from "@/components/ui/question-link.vue";
-import UiScreen from "@/components/ui/ui-screen.vue";
+import { defineComponent, ref } from 'vue';
+import UiParagraph from '@/components/ui/ui-paragraph.vue';
+import ButtonLink from '@/components/ui/button-link.vue';
+import QuestionLink from '@/components/ui/question-link.vue';
+import UiScreen from '@/components/ui/ui-screen.vue';
 
 export default defineComponent({
-  name: "screen-questions",
+  name: 'screen-questions',
   props: {
     level: {
       type: Number,
@@ -48,11 +48,12 @@ export default defineComponent({
       required: true,
     },
   },
-  emits: ["leave"],
-  setup() {
+  emits: { leave: null, select: (question: string) => true },
+  setup(_props, context) {
     const selected = ref<string | undefined>();
     const choose = (question: string) => {
       selected.value = question;
+      context.emit('select', question);
     };
 
     return { selected, choose };

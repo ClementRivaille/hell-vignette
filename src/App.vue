@@ -4,6 +4,7 @@
       <transition :name="transition.name" :mode="transition.mode">
         <screen-start
           v-if="state.screen === GameScreen.Start"
+          :resume="hasSave"
           @begin="onBegin"
         />
 
@@ -34,7 +35,8 @@
           v-else-if="state.screen === GameScreen.Question"
           :level="state.level"
           :questions="state.questions"
-          @leave="onLeaveQuestion($event)"
+          @leave="onLeaveQuestion"
+          @select="onSelectQuestion"
         />
 
         <screen-before-end
@@ -55,27 +57,27 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, onMounted, reactive } from 'vue';
-import { GameScreen } from '@/utils/screens';
-import BackgroundLandscape from '@/components/ui/background-landscape.vue';
+import ScreenBeforeEnd from '@/components/screens/screen-before-end.vue';
+import ScreenCell from '@/components/screens/screen-cell.vue';
+import ScreenCredits from '@/components/screens/screen-credits.vue';
+import ScreenEnd from '@/components/screens/screen-end.vue';
+import ScreenHub from '@/components/screens/screen-hub.vue';
+import ScreenQuestions from '@/components/screens/screen-questions.vue';
 import ScreenStart from '@/components/screens/screen-start.vue';
 import ScreenTorture from '@/components/screens/screen-torture.vue';
-import ScreenHub from '@/components/screens/screen-hub.vue';
-import ScreenCell from '@/components/screens/screen-cell.vue';
-import ScreenQuestions from '@/components/screens/screen-questions.vue';
-import ScreenBeforeEnd from '@/components/screens/screen-before-end.vue';
-import ScreenEnd from '@/components/screens/screen-end.vue';
-import ScreenCredits from '@/components/screens/screen-credits.vue';
-import screenLoading from './components/screens/screen-loading.vue';
-
+import BackgroundLandscape from '@/components/ui/background-landscape.vue';
 import '@/styles/fonts.css';
 import '@/styles/screen.css';
-import { CellConfig, cellsConfigs } from './utils/cells';
+import { GameScreen } from '@/utils/screens';
+import { computed, defineComponent, onMounted, reactive } from 'vue';
+import screenLoading from './components/screens/screen-loading.vue';
 import {
   activateMusic,
   deactivateMusic,
   loadSounds,
 } from './utils/audio-manager';
+import { CellConfig, cellsConfigs } from './utils/cells';
+import { deleteProgress, loadProgress, saveProgress } from './utils/save';
 
 interface GameState {
   screen: GameScreen;
@@ -105,15 +107,22 @@ export default defineComponent({
       mode: 'in-out',
     });
 
+    const save = loadProgress();
+
     onMounted(async () => {
       await loadSounds();
       state.screen = GameScreen.Start;
     });
 
-    const onBegin = () => {
+    const onBegin = (resume: boolean) => {
+      if (resume && save) {
+        state.level = save.level;
+        state.questions = save.questions;
+      }
       transition.mode = 'in-out';
       state.screen = GameScreen.Torture;
     };
+
     const onExitTorture = () => {
       transition.mode = 'out-in';
 
@@ -127,8 +136,7 @@ export default defineComponent({
         state.screen = GameScreen.BeforeEnd;
         activateMusic();
       } else {
-        transition.mode = 'in-out';
-        state.screen = GameScreen.Credits;
+        onEnd();
       }
     };
     const onOpenCell = (cell: string) => {
@@ -145,8 +153,11 @@ export default defineComponent({
       state.screen =
         state.cells.length > 0 ? GameScreen.Hub : GameScreen.Question;
     };
-    const onLeaveQuestion = (question: string) => {
+    const onSelectQuestion = (question: string) => {
       state.questions = state.questions.filter((q) => q !== question);
+      saveProgress({ level: state.level + 1, questions: state.questions });
+    };
+    const onLeaveQuestion = () => {
       state.level++;
       state.screen = GameScreen.Torture;
       deactivateMusic();
@@ -158,22 +169,27 @@ export default defineComponent({
     };
     const onRefuseEnd = () => {
       state.level++;
+      saveProgress({ level: state.level, questions: state.questions });
+
       transition.mode = 'in-out';
       state.screen = GameScreen.Torture;
     };
     const onEnd = () => {
       transition.mode = 'in-out';
       state.screen = GameScreen.Credits;
+      deleteProgress();
     };
 
     return {
       state,
       transition,
       GameScreen,
+      hasSave: !!save,
       onBegin,
       onExitTorture,
       onOpenCell,
       onExitCell,
+      onSelectQuestion,
       onLeaveQuestion,
       onEnterEnd,
       onRefuseEnd,

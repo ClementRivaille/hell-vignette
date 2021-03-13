@@ -4,7 +4,10 @@
       <div>
         <h1>{{ $t('start.title') }}</h1>
         <div class="menu">
-          <a href="#" @click.prevent="begin">{{ $t('start.begin') }}</a>
+          <a href="#" @click.prevent="begin(false)">{{ $t('start.begin') }}</a>
+          <a v-if="resume" href="#" @click.prevent="begin(true)">{{
+            $t('start.continue')
+          }}</a>
         </div>
       </div>
       <hv-options />
@@ -20,11 +23,18 @@ import HvOptions from '../hv-options.vue';
 export default defineComponent({
   name: 'screen-start',
   components: { UiScreen, HvOptions },
-  emits: ['begin'],
+  props: {
+    resume: {
+      type: Boolean,
+    },
+  },
+  emits: {
+    begin: (payload: boolean) => true,
+  },
   setup(_props, context) {
     return {
-      begin() {
-        context.emit('begin');
+      begin(resume: boolean) {
+        context.emit('begin', resume);
       },
     };
   },

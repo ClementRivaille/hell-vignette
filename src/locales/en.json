@@ -2,7 +2,8 @@
   "loading": "Loading assets…",
   "start": {
     "title": "Hells Vignette",
-    "begin": "Start"
+    "begin": "Start",
+    "continue": "Continue"
   },
   "torture": {
     "instruction": "Copy the code below",
