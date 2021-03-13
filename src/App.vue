@@ -5,7 +5,9 @@
         <screen-start
           v-if="state.screen === GameScreen.Start"
           :resume="hasSave"
+          :no-input="state.noInput"
           @begin="onBegin"
+          @toggle-no-input="toggleNoInput()"
         />
 
         <screen-loading v-else-if="state.screen === GameScreen.Loading" />
@@ -102,7 +104,7 @@ export default defineComponent({
       cells: [],
       selectedCell: undefined,
       questions: ['deserve', 'eternity', 'tortures', 'pretty', 'who'],
-      noInput: true,
+      noInput: false,
     });
 
     const transition = reactive({
@@ -116,6 +118,10 @@ export default defineComponent({
       await loadSounds();
       state.screen = GameScreen.Start;
     });
+
+    const toggleNoInput = () => {
+      state.noInput = !state.noInput;
+    };
 
     const onBegin = (resume: boolean) => {
       if (resume && save) {
@@ -188,6 +194,7 @@ export default defineComponent({
       transition,
       GameScreen,
       hasSave: !!save,
+      toggleNoInput,
       onBegin,
       onExitTorture,
       onOpenCell,

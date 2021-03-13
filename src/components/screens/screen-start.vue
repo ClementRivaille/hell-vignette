@@ -10,7 +10,13 @@
           }}</a>
         </div>
       </div>
-      <hv-options />
+      <hv-options
+        :no-input="noInput"
+        @toggle-no-input="$emit('toggle-no-input')"
+      />
+      <ui-info>
+        {{ $t('start.save') }}
+      </ui-info>
     </div>
   </ui-screen>
 </template>
@@ -19,17 +25,20 @@
 import UiScreen from '@/components/ui/ui-screen.vue';
 import { defineComponent } from 'vue';
 import HvOptions from '../hv-options.vue';
+import UiInfo from '../ui/ui-info.vue';
 
 export default defineComponent({
   name: 'screen-start',
-  components: { UiScreen, HvOptions },
+  components: { UiScreen, HvOptions, UiInfo },
   props: {
     resume: {
       type: Boolean,
     },
+    noInput: Boolean,
   },
   emits: {
     begin: (payload: boolean) => true,
+    'toggle-no-input': null,
   },
   setup(_props, context) {
     return {

@@ -270,6 +270,12 @@
   "options": {
     "language": "Langue :",
     "fr": "fr",
-    "en": "en"
+    "en": "en",
+    "no-input": {
+      "label": "Mode sans saisie clavier (accessibilité) :",
+      "description": "Les phases de saisie au clavier seront remplacées par des courtes périodes d'attente"
+    },
+    "off": "Off",
+    "on": "On"
   }
 }

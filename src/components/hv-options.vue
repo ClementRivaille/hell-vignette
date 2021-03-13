@@ -2,35 +2,41 @@
   <div class="hv-options">
     <div class="language">
       <span>{{ $t('options.language') }}</span>
-      <button
-        class="toggle"
-        :class="{ active: locale === 'en' }"
-        @click="updateLocale('en')"
-      >
+      <ui-toggle :active="locale === 'en'" @click="updateLocale('en')">
         {{ $t('options.en') }}
-      </button>
+      </ui-toggle>
       <span>|</span>
-      <button
-        class="toggle"
-        :class="{ active: locale === 'fr' }"
-        @click="updateLocale('fr')"
-      >
+      <ui-toggle :active="locale === 'fr'" @click="updateLocale('fr')">
         {{ $t('options.fr') }}
-      </button>
+      </ui-toggle>
     </div>
-    <ui-paragraph class="info">
-      {{ $t('start.save') }}
-    </ui-paragraph>
+    <div class="accessibility">
+      <div>
+        <span>{{ $t('options.no-input.label') }}</span>
+        <ui-toggle :active="noInput" @click="$emit('toggle-no-input')">
+          {{ $t(`options.${noInput ? 'on' : 'off'}`) }}
+        </ui-toggle>
+      </div>
+      <ui-info v-if="noInput">
+        {{ $t('options.no-input.description') }}
+      </ui-info>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import { useLocale, useUpdateLocale } from '@/utils/i18n';
 import { defineComponent } from 'vue';
+import UiInfo from './ui/ui-info.vue';
 import uiParagraph from './ui/ui-paragraph.vue';
+import UiToggle from './ui/ui-toggle.vue';
 
 export default defineComponent({
-  components: { uiParagraph },
+  components: { UiToggle, UiInfo },
+  props: {
+    noInput: Boolean,
+  },
+  emits: ['toggle-no-input'],
   setup() {
     return {
       locale: useLocale(),
@@ -61,29 +67,12 @@ export default defineComponent({
   margin-left: 0.2rem;
 }
 
-.toggle {
-  background: none;
-  border: none;
-  padding: none;
-  color: inherit;
-  font-size: inherit;
-  cursor: pointer;
+.accessibility {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
-.toggle.active {
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-.toggle:focus {
-  outline: none;
-  border: dotted 1px white;
-  border-radius: 5px;
-}
-
-.info {
-  margin-top: 3rem;
-  font-style: italic;
-  font-size: 0.7rem;
+.accessibility > * + * {
+  margin-top: 0.2rem;
 }
 </style>

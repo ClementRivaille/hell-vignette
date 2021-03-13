@@ -270,6 +270,12 @@
   "options": {
     "language": "Language:",
     "fr": "fr",
-    "en": "en"
+    "en": "en",
+    "no-input": {
+      "label": "Disable keyboard inputs (accessibility):",
+      "description": "Keyboard input sequences will be replaced with short waiting times"
+    },
+    "off": "Off",
+    "on": "On"
   }
 }
