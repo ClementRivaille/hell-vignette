@@ -16,6 +16,14 @@
       "Ça te dis une promenade ?",
       "Hey, j'ai à te parler…"
     ],
+    "help": [
+      "Prends ton temps, ce n'est qu'un moment à passer.",
+      "Plus tu échoues, plus ça sera long. Reste donc concentré.",
+      "Chaque échec te fais reculer. En étant consciencieux, tu peux y arriver.",
+      "Allez, je sais que tu peux le faire ! Ne désespère pas.",
+      "Je serais toi, je noterais le code quelque part plutôt que de la mémoriser.",
+      "Tu sais, rien ne t'interdit de copier le code. Mais ça doit rester un secret, d'accord ?"
+    ],
     "intro": "Wow, combien de temps cela fait que tu purges ta peine maintenant ? Des années ? Des siècles ? Ça fait plaisir de voir que tu t'y adonnes à cœur en tout cas ! Que dirais-tu d'une petite pause ? Sortons de ta cellule, et je te fais visiter un peu les Enfers. Ne t'en fais pas, je te ramènerai en temps et en heure.",
     "intro-exit": "Sortons, si tu veux bien.",
     "ready": "Je suis prêt…"

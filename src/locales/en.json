@@ -16,13 +16,21 @@
       "How about a walk?",
       "Hey, I have something to tell you…"
     ],
-    "intro": "Wow, how long have you been serving your sentence now? Years? Centuries? It's nice to see that you put so much dedication to it! How about you take a short break? Come out of your cell, I'm taking you to a tour of Hells. Don't worry, you'll be back in no time.",
+    "help": [
+      "Take your time, it's only a moment to pass.",
+      "The more you fail, the longer this will last. Keep focused.",
+      "Each failure makes you go back. If you remain conscientious, you'll make it.",
+      "Come on, I know you can do it! Don't despair.",
+      "If I was you, I'd write down the code somewhere instead of memorizing it.",
+      "You know, there's nothing forbidding you to copy the code. But you must keep this a secret, okay? "
+    ],
+    "intro": "Wow, how long have you been serving your sentence now? Years? Centuries? It's nice to see that you put so much dedication into it! How about you take a short break? Come out of your cell, I'm taking you to a tour of Hells. Don't worry, you'll be back in no time.",
     "intro-exit": "Let's get out, shall we?",
     "ready": "I'm ready…"
   },
   "hub": {
     "next": "Which cell do you want to visit next?",
-    "text-0": "Long time you haven't seeen day light, have you? From here, we can access the torture cells. There are more than you could ever visit in an entire life! Each cell is personally made for their patients. I suggest we stay around the closest ones. Go on, chose the first cell you're curious about.",
+    "text-0": "Long time you haven't seen day light, have you? From here, we can access the torture cells. There are more than you could ever visit in an entire life! Each cell is personally made for their patients. I suggest we stay around the closest ones. Go on, chose the first cell you're curious about.",
     "text-1": "You look still in shape! It seems the pain didn't make you succomb to madness yet. Let's go outside. Chose a cell, and I'll show it to you.",
     "text-2": "I see you're holding out, that's great. You have nothing to envy from Sisyphus! Unfortunately I'm afraid the worst for you is yet to come. Maybe you don't see the purpose of your anguish, but it will change you, believe me. In the meanwhile, let's do some sightseeing! Where do you want to go?",
     "text-3": "How long has it been since my last visit? Two weeks? Several months? Years!? It's easy to lose track of time here… But it's better that way! Come on, tell me what you wish to see.",

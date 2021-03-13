@@ -28,6 +28,9 @@
                 {{ last ? $t(`torture.ready`) : $t(`torture.exit.${level}`) }}
               </button-link>
             </div>
+            <ui-paragraph v-if="state.help && !(state.free || last)">
+              {{ $t(`torture.help.${level}`) }}
+            </ui-paragraph>
           </div>
 
           <div class="error" v-if="state.displayError">
@@ -69,10 +72,12 @@ interface TortureState {
   typed: string;
   cursor: number;
   score: number;
+  fails: number;
   free: boolean;
   displayIntro: boolean;
   inkFade: InkFade;
   mask: Mask;
+  help: boolean;
 }
 
 enum InkFade {
@@ -109,10 +114,12 @@ export default defineComponent({
       typed: '',
       cursor: 0,
       score: 0,
+      fails: 0,
       free: false,
       displayIntro: false,
       inkFade: computed(() => getInkFade()),
       mask: computed(() => getMask()),
+      help: computed(() => state.fails >= 4),
     });
 
     const getInkFade = (): InkFade => {
@@ -174,6 +181,7 @@ export default defineComponent({
         state.score = Math.max(state.score - 1, 0);
       }
       playWrong();
+      state.fails++;
 
       state.locked = true;
       state.displayError = true;
