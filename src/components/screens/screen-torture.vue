@@ -215,7 +215,7 @@ export default defineComponent({
     };
 
     const onKeyDown = (e: KeyboardEvent) => {
-      if (state.locked) return;
+      if (state.locked || props.wait) return;
 
       const pressed = e.key;
       if (!characters.includes(pressed.toLowerCase())) return;

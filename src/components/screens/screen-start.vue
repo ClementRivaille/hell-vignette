@@ -58,6 +58,10 @@ export default defineComponent({
   align-items: center;
 }
 
+.start > * + * {
+  margin-top: 2rem;
+}
+
 h1 {
   font-size: 4.3rem;
   text-align: center;
