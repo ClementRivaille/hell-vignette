@@ -3,7 +3,7 @@
     <div class="torture-screen">
       <transition name="screen-fade" mode="out-in">
         <div class="torture" v-if="!state.displayIntro">
-          <div class="prompt">
+          <div class="prompt" v-if="!wait">
             <div class="instructions">{{ $t('torture.instruction') }}</div>
             <div class="code">
               <transition name="code-fade">
@@ -14,8 +14,18 @@
             </div>
           </div>
 
-          <div class="typed" :class="`fade-${state.inkFade}`">
+          <div class="typed" :class="`fade-${state.inkFade}`" v-if="!wait">
             {{ state.typed }}
+          </div>
+
+          <div class="wait" v-if="wait">
+            <span v-if="!last">
+              {{ $t('torture.wait.intro') }}
+              {{ $t(`torture.wait.levels.${level}`) }}
+            </span>
+            <span v-if="last">
+              {{ $t('torture.wait.last') }}
+            </span>
           </div>
 
           <div class="help">
@@ -103,6 +113,9 @@ export default defineComponent({
     last: {
       type: Boolean,
     },
+    wait: {
+      type: Boolean,
+    },
   },
   emit: ['exit'],
   components: { ButtonLink, UiParagraph, UiScreen },
@@ -153,7 +166,16 @@ export default defineComponent({
       }
       state.prompt = prompt;
     };
-    onMounted(() => generatePrompt());
+
+    onMounted(() => {
+      if (!props.wait) {
+        generatePrompt();
+      } else {
+        setTimeout(() => {
+          state.free = true;
+        }, 1000 * 60);
+      }
+    });
 
     const reset = () => {
       state.typed = '';
@@ -251,6 +273,12 @@ export default defineComponent({
 .instructions {
   font-size: 1.2rem;
   margin-bottom: 0.2rem;
+}
+
+.wait {
+  text-align: center;
+  font-family: ataristocrat;
+  font-size: 3rem;
 }
 
 .code {

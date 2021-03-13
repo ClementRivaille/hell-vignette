@@ -25,6 +25,18 @@
       "If I was you, I'd write down the code somewhere instead of memorizing it.",
       "You know, there's nothing forbidding you to copy the code. But you must keep this a secret, okay? "
     ],
+    "wait": {
+      "last": "Please wait indefinitely while focusing on negative thoughts",
+      "intro": "Please wait for 1 minute",
+      "levels": [
+        "while thinking about unpleasant things",
+        "while listing things that make you sad",
+        "while remembering your failures",
+        "while imagining awkward situations",
+        "while considering your death",
+        "and give up all subsisting hope"
+      ]
+    },
     "intro": "Wow, how long have you been serving your sentence now? Years? Centuries? It's nice to see that you put so much dedication into it! How about you take a short break? Come out of your cell, I'm taking you to a tour of Hells. Don't worry, you'll be back in no time.",
     "intro-exit": "Let's get out, shall we?",
     "ready": "I'm ready…"

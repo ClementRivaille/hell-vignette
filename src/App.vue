@@ -15,6 +15,7 @@
           :level="state.level"
           :last="state.lastLevel"
           @exit="onExitTorture"
+          :wait="state.noInput"
         />
 
         <screen-hub
@@ -86,6 +87,7 @@ interface GameState {
   cells: string[];
   selectedCell?: CellConfig;
   questions: string[];
+  noInput: boolean;
 }
 
 const NB_LEVELS = 5;
@@ -100,6 +102,7 @@ export default defineComponent({
       cells: [],
       selectedCell: undefined,
       questions: ['deserve', 'eternity', 'tortures', 'pretty', 'who'],
+      noInput: true,
     });
 
     const transition = reactive({

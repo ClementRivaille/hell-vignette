@@ -25,6 +25,18 @@
       "Je serais toi, je noterais le code quelque part plutôt que de la mémoriser.",
       "Tu sais, rien ne t'interdit de copier le code. Mais ça doit rester un secret, d'accord ?"
     ],
+    "wait": {
+      "last": "Veuillez patienter indéfiniment en vous focalisant sur du négatif",
+      "intro": "Veuillez patienter 1 minute",
+      "levels": [
+        "en pensant à des choses désagréables",
+        "en réfléchissant à ce qui vous rend triste",
+        "en vous remémorant vos échecs",
+        "en imaginant des situations inconfortables",
+        "en considérant votre mort",
+        "et abandonner tout espoir subsistant"
+      ]
+    },
     "intro": "Wow, combien de temps cela fait que tu purges ta peine maintenant ? Des années ? Des siècles ? Ça fait plaisir de voir que tu t'y adonnes à cœur en tout cas ! Que dirais-tu d'une petite pause ? Sortons de ta cellule, et je te fais visiter un peu les Enfers. Ne t'en fais pas, je te ramènerai en temps et en heure.",
     "intro-exit": "Sortons, si tu veux bien.",
     "ready": "Je suis prêt…"
