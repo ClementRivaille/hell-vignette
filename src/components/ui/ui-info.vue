@@ -11,6 +11,7 @@
   align-items: center;
   font-style: italic;
   font-size: 0.7rem;
+  text-align: center;
 }
 
 .info > * + * {

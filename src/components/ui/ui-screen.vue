@@ -5,9 +5,9 @@
 </template>
 
 <script lang="ts">
-import Vue, { defineComponent } from "vue";
+import Vue, { defineComponent } from 'vue';
 export default defineComponent({
-  name: "ui-screen",
+  name: 'ui-screen',
   props: {
     color: String,
   },
@@ -36,8 +36,21 @@ export default defineComponent({
 }
 
 .screen::v-deep > *:after {
-  content: " ";
+  content: ' ';
   display: block;
   height: 2rem;
+}
+
+@media screen and (max-width: 800px) {
+  .screen {
+    padding: 0 2rem;
+    padding-top: 3rem;
+  }
+
+  .screen::v-deep > *:after {
+    content: ' ';
+    display: block;
+    height: 1rem;
+  }
 }
 </style>

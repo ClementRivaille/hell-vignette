@@ -11,27 +11,27 @@
         </ui-paragraph>
       </div>
       <img class="image" :src="imageSrc" />
-      <door-button @click="$emit('exit')">{{ $t("cells.exit") }}</door-button>
+      <door-button @click="$emit('exit')">{{ $t('cells.exit') }}</door-button>
     </div>
   </ui-screen>
 </template>
 
 <script lang="ts">
-import { CellConfig } from "@/utils/cells";
-import Vue, { defineComponent } from "vue";
-import UiParagraph, { TextColor } from "@/components/ui/ui-paragraph.vue";
-import DoorButton from "@/components/ui/door-button.vue";
-import UiScreen from "@/components/ui/ui-screen.vue";
+import { CellConfig } from '@/utils/cells';
+import Vue, { defineComponent } from 'vue';
+import UiParagraph, { TextColor } from '@/components/ui/ui-paragraph.vue';
+import DoorButton from '@/components/ui/door-button.vue';
+import UiScreen from '@/components/ui/ui-screen.vue';
 
 export default defineComponent({
-  name: "screen-cell",
+  name: 'screen-cell',
   props: {
     cell: {
       type: Object as () => CellConfig,
       required: true,
     },
   },
-  emits: ["exit"],
+  emits: ['exit'],
   components: { UiParagraph, DoorButton, UiScreen },
   setup: (props) => {
     return {
@@ -63,5 +63,12 @@ export default defineComponent({
   max-width: 80vw;
   object-fit: contain;
   border-radius: 40px;
+}
+
+@media screen and (max-width: 800px) {
+  .image {
+    min-width: 10rem;
+    max-width: min(16rem, 80vw);
+  }
 }
 </style>
