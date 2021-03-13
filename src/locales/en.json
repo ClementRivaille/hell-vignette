@@ -3,7 +3,8 @@
   "start": {
     "title": "Hells Vignette",
     "begin": "Start",
-    "continue": "Continue"
+    "continue": "Continue",
+    "save": "Progress is automatically saved after each level"
   },
   "torture": {
     "instruction": "Copy the code below",

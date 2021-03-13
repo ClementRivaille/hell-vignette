@@ -16,8 +16,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
 import UiScreen from '@/components/ui/ui-screen.vue';
+import { defineComponent } from 'vue';
 import HvOptions from '../hv-options.vue';
 
 export default defineComponent({

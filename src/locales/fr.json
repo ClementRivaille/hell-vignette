@@ -3,7 +3,8 @@
   "start": {
     "title": "Vignette des Enfers",
     "begin": "Commencer",
-    "continue": "Continuer"
+    "continue": "Continuer",
+    "save": "La progression est sauvegardée automatiquement après chaque niveau"
   },
   "torture": {
     "instruction": "Recopiez le code ci-dessous",

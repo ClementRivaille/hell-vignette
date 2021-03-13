@@ -18,14 +18,19 @@
         {{ $t('options.fr') }}
       </button>
     </div>
+    <ui-paragraph class="info">
+      {{ $t('start.save') }}
+    </ui-paragraph>
   </div>
 </template>
 
 <script lang="ts">
 import { useLocale, useUpdateLocale } from '@/utils/i18n';
 import { defineComponent } from 'vue';
+import uiParagraph from './ui/ui-paragraph.vue';
 
 export default defineComponent({
+  components: { uiParagraph },
   setup() {
     return {
       locale: useLocale(),
@@ -38,13 +43,14 @@ export default defineComponent({
 <style scoped>
 .hv-options {
   display: flex;
-  justify-content: center;
-  font: white;
+  flex-direction: column;
+  align-items: center;
+  color: white;
   font-size: 0.8rem;
 }
 
 .hv-options > * + * {
-  margin-left: 2rem;
+  margin-top: 1rem;
 }
 
 .language {
@@ -73,5 +79,11 @@ export default defineComponent({
   outline: none;
   border: dotted 1px white;
   border-radius: 5px;
+}
+
+.info {
+  margin-top: 3rem;
+  font-style: italic;
+  font-size: 0.7rem;
 }
 </style>
