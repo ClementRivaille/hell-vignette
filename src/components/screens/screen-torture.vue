@@ -5,10 +5,16 @@
         <div class="torture" v-if="!state.displayIntro">
           <div class="prompt">
             <div class="instructions">{{ $t('torture.instruction') }}</div>
-            <div class="code">{{ state.prompt }}</div>
+            <div class="code">
+              <transition name="code-fade">
+                <span class="mask" :class="state.mask" :key="state.prompt">{{
+                  state.prompt
+                }}</span>
+              </transition>
+            </div>
           </div>
 
-          <div class="typed">
+          <div class="typed" :class="`fade-${state.inkFade}`">
             {{ state.typed }}
           </div>
 
@@ -65,6 +71,20 @@ interface TortureState {
   score: number;
   free: boolean;
   displayIntro: boolean;
+  inkFade: InkFade;
+  mask: Mask;
+}
+
+enum InkFade {
+  none = 'none',
+  medium = 'medium',
+  full = 'full',
+}
+
+enum Mask {
+  none = 'none',
+  slow = 'slow',
+  fast = 'fast',
 }
 
 const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
@@ -91,7 +111,26 @@ export default defineComponent({
       score: 0,
       free: false,
       displayIntro: false,
+      inkFade: computed(() => getInkFade()),
+      mask: computed(() => getMask()),
     });
+
+    const getInkFade = (): InkFade => {
+      if (props.level < 2) {
+        return InkFade.none;
+      } else if (props.level == 2) {
+        return InkFade.medium;
+      }
+      return InkFade.full;
+    };
+    const getMask = (): Mask => {
+      if (props.level < 4) {
+        return Mask.none;
+      } else if (props.level === 4) {
+        return Mask.slow;
+      }
+      return Mask.fast;
+    };
 
     const generatePrompt = () => {
       let prompt = '';
@@ -107,7 +146,7 @@ export default defineComponent({
       }
       state.prompt = prompt;
     };
-    generatePrompt();
+    onMounted(() => generatePrompt());
 
     const reset = () => {
       state.typed = '';
@@ -131,7 +170,9 @@ export default defineComponent({
     };
 
     const onError = () => {
-      state.score = Math.max(state.score - 1, 0);
+      if (props.level > 0) {
+        state.score = Math.max(state.score - 1, 0);
+      }
       playWrong();
 
       state.locked = true;
@@ -226,6 +267,12 @@ export default defineComponent({
   align-items: center;
   justify-content: space-around;
 }
+.typed.fade-medium {
+  color: rgba(0, 0, 0, 0.1);
+}
+.typed.fade-full {
+  color: rgba(0, 0, 0, 0);
+}
 
 .error {
   position: fixed;
@@ -258,5 +305,32 @@ export default defineComponent({
 }
 .intro > * + * {
   margin-top: 4rem;
+}
+
+.code-fade-enter-active {
+  opacity: 1;
+}
+.mask.slow.code-fade-enter-active {
+  animation: code-fade 10s;
+  animation-delay: 3s;
+}
+.mask.fast.code-fade-enter-active {
+  animation: code-fade 6s;
+  animation-delay: 2s;
+}
+.mask.code-fade-leave-active {
+  display: none;
+}
+.mask:not(.code-fade-enter-active):not(.none) {
+  opacity: 0;
+}
+
+@keyframes code-fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 </style>
